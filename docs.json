@@ -7,10 +7,7 @@
     "light": "#FFB800",
     "dark": "#C85000"
   },
-  "favicon": "/favicon.svg",
-  "thumbnails": {
-    "background": "/images/og-invite.jpg"
-  },
+  "favicon": "/favicon-32x32.png",
   "styling": {
     "customCss": "/style.css"
   },
