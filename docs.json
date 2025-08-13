@@ -29,30 +29,35 @@
             "pages": [
               "about/overview",
               "about/why",
-              "about/who",
-              "about/features"
+              "about/who"
             ]
           },
           {
-            "group": "Commands",
-            "pages": ["commands"]
-          },
-          {
-            "group": "Referrals and Rewards",
-            "pages": ["referrals-and-rewards"]
-          },
-          {
-            "group": "Developers",
+            "group": "Platform",
             "pages": [
-              "developers/quickstart",
-              "developers/protocol"
+              "platform/telegram/index",
+              "platform/telegram/commands",
+              "platform/stealth"
             ]
           },
           {
-            "group": "Brand",
+            "group": "Arena",
             "pages": [
-              "brand/guidelines",
-              "brand/assets"
+              "arena/index",
+              "arena/wagers",
+              "arena/ranks-elo",
+              "arena/queues"
+            ]
+          },
+          {
+            "group": "NFT",
+            "pages": ["nft"]
+          },
+          {
+            "group": "Rewards and Points",
+            "pages": [
+              "rewards-and-points/referrals-and-rewards",
+              "rewards-and-points/points"
             ]
           }
         ]
@@ -69,15 +74,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {}
 }
