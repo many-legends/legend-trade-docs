@@ -1,96 +1,253 @@
-/* Global overrides per Mintlify Custom Scripts expectations */
-@import url('https://fonts.googleapis.com/css2?family=Metal&display=swap');
+/* =============================================================================
+   Legend Trade Docs - Custom Styling
+   Adapted from legend-frontend styling system
+   ============================================================================= */
 
-/* Immediate visual confirmation of dark mode */
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./fonts/instrument-sans/instrument-sans-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fenul Standard';
+  src:
+    url('./fonts/fenul/fenul-standard-medium.woff2') format('woff2'),
+    url('./fonts/fenul/fenul-standard-medium.woff') format('woff'),
+    url('./fonts/fenul/fenul-standard-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fenul Standard';
+  src:
+    url('./fonts/fenul/fenul-standard-medium-italic.woff2') format('woff2'),
+    url('./fonts/fenul/fenul-standard-medium-italic.woff') format('woff'),
+    url('./fonts/fenul/fenul-standard-medium-italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fenul Compressed';
+  src:
+    url('./fonts/fenul/fenul-compressed-medium.woff2') format('woff2'),
+    url('./fonts/fenul/fenul-compressed-medium.woff') format('woff'),
+    url('./fonts/fenul/fenul-compressed-medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/geist-mono/geist-mono-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Akira';
+  src:
+    url('./fonts/akira/akira-super-bold.woff2') format('woff2'),
+    url('./fonts/akira/akira-super-bold.woff') format('woff'),
+    url('./fonts/akira/akira-super-bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =============================================================================
+   Root Variables & Theme Configuration
+   ============================================================================= */
+
+/* Shrink Global base font-size: scales all text sizes */
+html {
+  font-size: 14px;
+}
+
+:root {
+  /* Color Palette - Black Scale */
+  --color-black-16: #292929;
+  --color-black-28: #474747;
+  --color-black-40: #666666;
+  --color-black-52: #858585;
+  --color-black: #0a0a0a;
+
+  /* Color Palette - Gold Scale */
+  --color-gold-edge-6: #1f1200;
+  --color-gold-edge-23: #754600;
+  --color-gold-edge-39: #c77700;
+  --color-gold: #ffa318;
+
+  /* Color Palette - White Scale */
+  --color-white-6: #ffffff06;
+  --color-white-32: #7a7a7a;
+  --color-white-48: #999999;
+  --color-white-64: #b8b8b8;
+  --color-white-80: #d6d6d6;
+  --color-white: #f5f5f5;
+
+  /* Color Palette - Orange Scale */
+  --color-silhouette-orange-18: #5c2900;
+  --color-silhouette-orange-34: #ad4e00;
+  --color-silhouette-orange: #ff7300;
+
+  /* Color Palette - Accents */
+  --color-green: #30d158;
+
+  /* Font Families */
+  --font-sans: 'Instrument Sans', Inter, ui-sans-serif, system-ui;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular;
+  --font-akira: 'Akira', Impact, sans-serif;
+  --font-fenul: 'Fenul Standard', sans-serif;
+  --font-fenul-compressed: 'Fenul Compressed', sans-serif;
+  --font-fenul-cond: var(--font-fenul-compressed);
+
+  /* Border Radii */
+  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Semantic Colors */
+  --color-background: var(--color-black);
+  --color-input-background: var(--color-black);
+  --color-foreground: var(--color-white);
+  --color-muted: var(--color-white-32);
+  --color-muted-2: var(--color-white-48);
+  --color-muted-3: var(--color-white-64);
+  --color-muted-foreground: hsl(0 0% 45.1%);
+
+  --color-surface: var(--color-gold-edge-23);
+  --color-surface-foreground: var(--color-black);
+
+  --color-selected: var(--color-white-6);
+  --color-primary: var(--color-gold);
+  --color-primary-foreground: var(--color-black);
+  --color-primary-disabled: rgba(255, 163, 24, 0.25);
+  --color-primary-disabled-foreground: var(--color-white-32);
+  --color-primary-hover: var(--color-gold-edge-39);
+
+  --color-secondary: var(--color-gold-edge-23);
+  --color-secondary-hover: var(--color-gold-edge-6);
+  --color-secondary-foreground: var(--color-white);
+  --color-secondary-disabled: rgb(from var(--color-gold-edge-23) r g b / 0.25);
+  --color-secondary-disabled-foreground: var(--color-white-32);
+
+  --color-accent: var(--color-silhouette-orange);
+  --color-accent-foreground: var(--color-black);
+  --color-card: #1f1f1f;
+  --color-card-foreground: hsl(0 0% 3.9%);
+  --color-border: var(--color-gold-edge-39);
+  --color-border-muted: #333333;
+  --color-border-disabled: rgba(255, 255, 255, 0.16);
+  --color-border-active: var(--color-gold);
+  --color-outline: var(--color-gold-edge-6);
+  --color-outline-foreground: var(--color-white);
+
+  --color-input: hsl(0 0% 89.8%);
+
+  --color-highlight: var(--color-gold);
+  --color-highlight-muted-1: var(--color-black-52);
+  --color-highlight-muted-2: var(--color-white-48);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 3.9%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --color-confirm: var(--color-green);
+
+  --color-ring: hsl(0 0% 3.9%);
+  --color-chart-1: hsl(12 76% 61%);
+  --color-chart-2: hsl(173 58% 39%);
+  --color-chart-3: hsl(197 37% 24%);
+  --color-chart-4: hsl(43 74% 66%);
+  --color-chart-5: hsl(27 87% 67%);
+
+  --color-card-1: var(--color-black-16);
+  --color-card-3: rgba(0, 0, 0, 0.16);
+  --color-card-2: rgba(255, 255, 255, 0.16);
+
+  /* Spacing */
+  --spacing-24: 6rem;
+}
+
+/* =============================================================================
+   Base Styles
+   ============================================================================= */
+
+html,
 body {
-  background-color: #0b0b0b !important;
-  color: #f5f5f5 !important;
-  font-feature-settings: "rlig" 1, "calt" 1;
+  height: 100%;
   min-height: 100vh;
+}
+
+body {
+  background-color: #0a0a0a !important;
+  color: #f5f5f5 !important;
+  font-family: 'Instrument Sans', Inter, ui-sans-serif, system-ui !important;
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
   position: relative;
 }
 
-/* Navbar and footer examples */
+/* Base borders/outlines and fonts */
+* {
+  border-color: var(--color-border);
+  outline-color: rgb(from var(--color-ring) r g b / 0.5);
+  font-family: 'Instrument Sans', Inter, ui-sans-serif, system-ui;
+}
+
+/* =============================================================================
+   Component Styles
+   ============================================================================= */
+
+/* Navbar */
 #navbar {
   background: transparent;
 }
 
+.nav-logo,
+.nav-logo img,
+.nav-logo svg {
+  max-height: 72px !important;
+  height: 72px !important;
+  width: auto !important;
+}
+
+/* Sidebar section headers - target the actual Mintlify class */
+.sidebar-title,
+[class*="sidebar-title"],
+[class*="sidebarTitle"] {
+  font-family: 'Akira', Impact, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 0.75rem !important;
+}
+
+/* Footer */
 footer {
   margin-top: 2rem;
 }
 
-/* Glowy background overlay inspired by the main site */
-html, body {
-  height: 100%;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.4; /* 60% transparent overall */
-  background-image:
-    radial-gradient(ellipse at 50% -10%, rgba(255, 107, 0, 0.25) 0%, rgba(255, 107, 0, 0.12) 38%, transparent 62%),
-    radial-gradient(ellipse at 85% 10%, rgba(255, 184, 0, 0.18) 0%, transparent 52%),
-    radial-gradient(ellipse at 15% 20%, rgba(255, 107, 0, 0.12) 0%, transparent 48%);
-  filter: saturate(110%);
-}
-
-/* Design tokens (usable via hsl(var(--token))) */
-.dark, :root {
-  --radius: 0.5rem;
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --button: #FF6B00;
-  --button-foreground: #ffffff;
-  --hover: #FFB800;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --ring: 0 0% 83.1%;
-  --chart-1: 27 100% 55%;
-  --chart-2: 27 80% 45%;
-  --chart-3: 27 70% 35%;
-  --chart-4: 45 100% 55%;
-  --chart-5: 15 90% 50%;
-  --orange: #FF6B00;
-  --white: #ffffff;
-}
-
-/* Base borders/outlines */
-* {
-  border-color: hsl(var(--border));
-  outline-color: hsl(var(--ring) / 0.5);
-}
-
-/* Brand: style the text logo */
-.nav-logo {
-  font-family: 'Metal', serif !important;
-  font-weight: 400 !important;
-}
-
-/* Card blur utility */
+/* Card with backdrop blur */
 .bg-card {
-  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-/* Layout helpers (no Tailwind arbitrary values) */
+/* Layout containers */
 .container-wrapper {
   width: 100%;
   position: relative;
@@ -106,6 +263,7 @@ body::before {
   margin-right: auto;
 }
 
+/* Adjust layout when chat is open */
 body.chat-open .container-wrapper {
   width: 100%;
 }
@@ -116,10 +274,167 @@ body.chat-open .container-wrapper {
   }
 }
 
+/* Orange glow effect */
 .glow-orange {
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3),
-              0 0 20px rgba(255, 165, 0, 0.2),
-              0 0 30px rgba(255, 165, 0, 0.1);
+  box-shadow:
+    0 0 10px rgba(255, 165, 0, 0.3),
+    0 0 20px rgba(255, 165, 0, 0.2),
+    0 0 30px rgba(255, 165, 0, 0.1);
   border: 1px solid rgba(255, 165, 0, 0.5);
 }
 
+/* =============================================================================
+   Animations
+   ============================================================================= */
+
+/* Pixel flicker animation */
+@keyframes pixel-flicker {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: brightness(0.6);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1.1);
+  }
+  20% {
+    opacity: 0.4;
+    transform: scale(0.95);
+    filter: brightness(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1.2);
+  }
+  40% {
+    opacity: 0.5;
+    transform: scale(0.98);
+    filter: brightness(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1.25);
+  }
+  80% {
+    opacity: 0.3;
+    transform: scale(0.9);
+    filter: brightness(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: brightness(0.6);
+  }
+}
+
+.animate-pixel-flicker {
+  animation: pixel-flicker var(--flicker-duration, 900ms) ease-out forwards;
+}
+
+/* Marquee ticker animation */
+@keyframes marquee-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee-x var(--marquee-duration, 20s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-paused {
+  animation-play-state: paused;
+}
+
+/* Cloud drift animation */
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(-40cqw);
+  }
+  100% {
+    transform: translateX(140cqw);
+  }
+}
+
+/* =============================================================================
+   Typography Overrides
+   ============================================================================= */
+
+/* Main page titles use Akira */
+h1 {
+  font-family: 'Akira', Impact, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Subtitles and smaller headings use Fenul */
+h2, h3, h4, h5, h6 {
+  font-family: 'Fenul Standard', sans-serif !important;
+  font-weight: 500;
+}
+
+code, pre {
+  font-family: 'Geist Mono', ui-monospace, SFMono-Regular !important;
+}
+
+/* =============================================================================
+   Mintlify-specific Overrides
+   ============================================================================= */
+
+/* Apply custom fonts to Mintlify elements */
+.mintlify-text,
+.mintlify-paragraph,
+p,
+div,
+span,
+a,
+li {
+  font-family: 'Instrument Sans', Inter, ui-sans-serif, system-ui !important;
+}
+
+/* Main titles use Akira */
+.mintlify-title h1,
+[class*="title"] h1,
+article h1,
+main h1,
+h1 {
+  font-family: 'Akira', Impact, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Subtitles and other headings use Fenul */
+.mintlify-heading,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+h2, h3, h4, h5, h6 {
+  font-family: 'Fenul Standard', sans-serif !important;
+  font-weight: 500;
+}
+
+/* Card titles and subtitles */
+[class*="card"] h3,
+[class*="card"] h4,
+[class*="card"] p {
+  font-family: 'Fenul Standard', sans-serif !important;
+}
+
+.mintlify-code,
+.mintlify-codeblock,
+code,
+pre {
+  font-family: 'Geist Mono', ui-monospace, SFMono-Regular !important;
+}

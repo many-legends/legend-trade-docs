@@ -2,10 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "legend.trade docs",
+  "logo": "/logo.png",
   "colors": {
-    "primary": "#FF6B00",
-    "light": "#FFB800",
-    "dark": "#C85000"
+    "primary": "#ffa318",
+    "light": "#c77700",
+    "dark": "#754600"
   },
   "favicon": "/favicon-32x32.png",
   "styling": {
