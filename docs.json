@@ -9,6 +9,11 @@
     "dark": "#754600"
   },
   "favicon": "/favicon-32x32.png",
+  "metadata": {
+    "og:site_name": "Legend Trade Documentation",
+    "og:image": "https://docs.legend.trade/opengraph.png",
+    "twitter:site": "@legenddottrade"
+  },
   "styling": {
     "customCss": "/style.css"
   },
