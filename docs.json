@@ -9,6 +9,17 @@
     "dark": "#754600"
   },
   "favicon": "/favicon-32x32.png",
+  "fonts": {
+    "heading": {
+      "family": "Akira",
+      "source": "/fonts/akira/akira-super-bold.woff2",
+      "format": "woff2",
+      "weight": 900
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
   "metadata": {
     "og:site_name": "Legend Trade Documentation",
     "og:image": "https://docs.legend.trade/opengraph.png",
@@ -22,72 +33,61 @@
     "strict": true
   },
   "navigation": {
-    "anchors": [
+    "tabs": [
       {
-        "anchor": "Untitled Anchor",
-        "dropdowns": [
+        "tab": "Documentation",
+        "groups": [
           {
-            "dropdown": "Untitled Dropdown",
-            "tabs": [
-              {
-                "tab": "Documentation",
-                "groups": [
-                  {
-                    "group": "Getting Started",
-                    "pages": [
-                      "index"
-                    ]
-                  },
-                  {
-                    "group": "About",
-                    "pages": [
-                      "about/overview",
-                      "about/why",
-                      "about/who"
-                    ]
-                  },
-                  {
-                    "group": "Platform",
-                    "pages": [
-                      "platform/telegram/index",
-                      "platform/telegram/commands",
-                      "platform/stealth"
-                    ]
-                  },
-                  {
-                    "group": "Social",
-                    "pages": [
-                      "social",
-                      "feed",
-                      "clans",
-                      "chat"
-                    ]
-                  },
-                  {
-                    "group": "Arena",
-                    "pages": [
-                      "arena/index",
-                      "arena/mechanics",
-                      "arena/wagers",
-                      "arena/ranks-elo",
-                      "arena/queues"
-                    ]
-                  },
-                  {
-                    "group": "Rewards and Points",
-                    "pages": [
-                      "rewards-and-points/referrals-and-rewards",
-                      "rewards-and-points/points"
-                    ]
-                  },
-                  {
-                    "group": "Fees",
-                    "pages": [
-                      "about/fees"
-                    ]
-                  }
-                ]
-              }
+            "group": "Getting Started",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "About",
+            "pages": [
+              "about/overview",
+              "about/why",
+              "about/who"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/telegram/index",
+              "platform/telegram/commands"
+            ]
+          },
+          {
+            "group": "Social",
+            "pages": [
+              "social",
+              "feed",
+              "clans",
+              "chat"
+            ]
+          },
+          {
+            "group": "Arena",
+            "pages": [
+              "arena/index",
+              "arena/mechanics",
+              "arena/wagers",
+              "arena/ranks-elo",
+              "arena/queues"
+            ]
+          },
+          {
+            "group": "Rewards and Points",
+            "pages": [
+              "rewards-and-points/referrals-and-rewards",
+              "rewards-and-points/points"
+            ]
+          },
+          {
+            "group": "Fees",
+            "pages": [
+              "about/fees"
             ]
           }
         ]

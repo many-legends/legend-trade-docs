@@ -1,21 +1,22 @@
 ---
 title: "Fees"
+description: "Trading fees on Legend"
 ---
 
-Trading fees on Legend
+Legend follows the Hyperliquid trading fee model.
 
-We follow the Hyperliquid trading fee model.
-
-Trading fees are based on your rolling 14-day volume and are assessed at the end of each day in UTC. Sub-account volume counts toward the master account and all sub-accounts share the same fee tier. Referral rewards apply for a user's first \$1B in volume and referral discounts apply for a user's first \$25M in volume.
+Trading fees are based on your rolling 14-day volume, assessed at the end of each day in UTC. Sub-account volume counts toward the master account and all sub-accounts share the same fee tier. Referral rewards apply for a user's first \$1B in volume and referral discounts apply for a user's first \$25M in volume.
 
 Maker rebates are paid out continuously on each trade directly to the trading wallet.
 
-There are separate fee schedules for perps vs spot. Perps and spot volume will be counted together to determine your fee tier, and spot volume will count double toward your fee tier. i.e., (14d weighted volume) = (14d perps volume) + 2 \* (14d spot volume)
+There are separate fee schedules for perps vs spot. Both count toward your fee tier, with spot volume counting double:
 
-**Builder Code Fee**
+**14d weighted volume** = (14d perps volume) + 2 x (14d spot volume)
+
+## Builder Code Fee
 
 A builder code fee is applied on top of trading fees:
 
 - 0.025% for perpetuals on Hyperliquid
 
-For full details on Hyperliquid's fee tiers and staking discounts, see [[Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs)].
+For full details on Hyperliquid's fee tiers and staking discounts, see [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs).
