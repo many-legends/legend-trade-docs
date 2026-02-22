@@ -22,46 +22,65 @@
     "strict": true
   },
   "navigation": {
-    "tabs": [
+    "anchors": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "anchor": "Untitled Anchor",
+        "dropdowns": [
           {
-            "group": "Getting Started",
-            "pages": [
-              "index"
-            ]
-          },
-          {
-            "group": "About",
-            "pages": [
-              "about/overview",
-              "about/why",
-              "about/who"
-            ]
-          },
-          {
-            "group": "Platform",
-            "pages": [
-              "platform/telegram/index",
-              "platform/telegram/commands",
-              "platform/stealth"
-            ]
-          },
-          {
-            "group": "Arena",
-            "pages": [
-              "arena/index",
-              "arena/wagers",
-              "arena/ranks-elo",
-              "arena/queues"
-            ]
-          },
-          {
-            "group": "Rewards and Points",
-            "pages": [
-              "rewards-and-points/referrals-and-rewards",
-              "rewards-and-points/points"
+            "dropdown": "Untitled Dropdown",
+            "tabs": [
+              {
+                "tab": "Documentation",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": [
+                      "index"
+                    ]
+                  },
+                  {
+                    "group": "About",
+                    "pages": [
+                      "about/overview",
+                      "about/why",
+                      "about/who"
+                    ]
+                  },
+                  {
+                    "group": "Platform",
+                    "pages": [
+                      "platform/telegram/index",
+                      "platform/telegram/commands",
+                      "platform/stealth"
+                    ]
+                  },
+                  {
+                    "group": "Social",
+                    "pages": [
+                      "rewards-and-points-copied-1/untitled-page",
+                      "rewards-and-points-copied-1/referrals-and-rewards",
+                      "rewards-and-points-copied-1/untitled-page-1",
+                      "rewards-and-points-copied-1/untitled-page-2"
+                    ]
+                  },
+                  {
+                    "group": "Arena",
+                    "pages": [
+                      "arena/index",
+                      "arena/wagers",
+                      "arena/ranks-elo",
+                      "arena/queues"
+                    ]
+                  },
+                  {
+                    "group": "Rewards and Points",
+                    "pages": [
+                      "rewards-and-points/referrals-and-rewards",
+                      "rewards-and-points/points"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]
