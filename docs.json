@@ -67,6 +67,7 @@
                     "group": "Arena",
                     "pages": [
                       "arena/index",
+                      "arena/mechanics",
                       "arena/wagers",
                       "arena/ranks-elo",
                       "arena/queues"
