@@ -28,7 +28,9 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
           },
           {
             "group": "About",
@@ -54,10 +56,6 @@
               "arena/ranks-elo",
               "arena/queues"
             ]
-          },
-          {
-            "group": "NFT",
-            "pages": ["nft"]
           },
           {
             "group": "Rewards and Points",
