@@ -43,8 +43,7 @@
                     "pages": [
                       "about/overview",
                       "about/why",
-                      "about/who",
-                      "about/fees"
+                      "about/who"
                     ]
                   },
                   {
@@ -79,6 +78,12 @@
                     "pages": [
                       "rewards-and-points/referrals-and-rewards",
                       "rewards-and-points/points"
+                    ]
+                  },
+                  {
+                    "group": "Fees",
+                    "pages": [
+                      "about/fees"
                     ]
                   }
                 ]
