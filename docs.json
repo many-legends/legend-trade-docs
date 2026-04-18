@@ -47,6 +47,7 @@
           {
             "group": "Platform",
             "pages": [
+              "platform/web",
               "platform/ios"
             ]
           },
