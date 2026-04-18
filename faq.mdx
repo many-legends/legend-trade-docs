@@ -1,0 +1,178 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about Legend"
+mode: "wide"
+---
+
+## General
+
+<AccordionGroup>
+  <Accordion title="What is the difference between Legend and Hyperliquid?">
+    Legend is a competitive social trading platform built on top of Hyperliquid. Hyperliquid is the underlying exchange -- it provides the liquidity, order matching, and on-chain settlement. Legend adds the social and competitive layers: head-to-head Arena matches, ELO rankings, clans, copy-trading, live spectating, and a social feed.
+
+    TLDR: Hyperliquid is the engine. Legend is the experience built on top of it.
+  </Accordion>
+
+  <Accordion title="What can I trade on Legend?">
+    You can trade perpetual contracts (perps) on all assets available on Hyperliquid. This includes major crypto assets, memecoins, and more as Hyperliquid continues to add listings.
+  </Accordion>
+
+  <Accordion title="How do I sign up?">
+    You can sign up with **Google**, **X (Twitter)**, **email**, or by connecting an existing wallet via WalletConnect. Legend uses Privy to create a non-custodial embedded wallet for you automatically.
+  </Accordion>
+
+  <Accordion title="Is Legend available on mobile?">
+    Yes. Legend is available on iOS via the [App Store](https://apps.apple.com/us/app/legend-trade-anything/id6754900991). The full web app is also accessible from any mobile browser at [legend.trade](https://app.legend.trade).
+  </Accordion>
+
+  <Accordion title="Can I link accounts together or create sub-accounts?">
+    This is not currently supported.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Arena
+
+<AccordionGroup>
+  <Accordion title="What is the Arena?">
+    The Arena is Legend's competitive trading mode -- ranked PvP matches where two traders compete head-to-head over a fixed timeframe. Both players trade with a $10,000 paper trading balance. The trader with the higher ROI% at the end wins the wager. Every match affects your ELO rating and rank.
+  </Accordion>
+
+  <Accordion title="How do Arena matches work?">
+    1. **Queue up** -- choose your wager ($1-$20) and match duration (5m, 15m, 30m, or 1 hour)
+    2. **Get matched** -- you're paired with an opponent at a similar skill level, or challenge someone directly
+    3. **Trade** -- both players trade perps using a fixed $10,000 paper trading balance
+    4. **Settlement** -- when time runs out, the trader with the higher PnL wins and takes the full pot
+  </Accordion>
+
+  <Accordion title="How are wagers handled?">
+    Both players commit the same wager amount (between $1 and $20, in whole dollar increments). Wagers are locked at match start and settled automatically at the end. There is no partial payout -- the winner takes the full pot.
+  </Accordion>
+
+  <Accordion title="What is the Arena Balance?">
+    Each Arena match gives both players a fixed $10,000 paper trading balance to trade with. This is separate from your real account balance. The wager amount ($1-$20) is the real money at stake -- the paper balance is just your trading capital for the match.
+  </Accordion>
+
+  <Accordion title="What match types are available?">
+    - **Public Match** -- standard ranked matchmaking based on your ELO rating. Available 24/7.
+    - **Direct Challenge** -- challenge a specific player by sending them a duel link. Both players agree on wager and duration. Can be ranked or unranked.
+    - **Competitions** -- custom tournaments with configurable budgets ($10k-$100k) and unlimited participants.
+    - **Clan Battles** -- team-based matches between clans (in development).
+  </Accordion>
+
+  <Accordion title="Can I spectate matches?">
+    Yes. All Arena matches can be spectated in real-time, including by users who aren't logged in. Spectators see both players' PnL, positions, and trades as they happen. Copy-trading is available from the spectator view.
+  </Accordion>
+
+  <Accordion title="What happens if I lose connection during a match?">
+    Your positions remain open and your PnL continues to update. Arena matches are settled based on final PnL at match end regardless of connection status -- there is no pause or restart.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Deposits & Withdrawals
+
+<AccordionGroup>
+  <Accordion title="How do I deposit funds?">
+    Legend supports two deposit methods:
+    - **Bridge deposit** -- deposit USDC from multiple networks, bridged to Hyperliquid's HyperCore via Unifold
+    - **Card deposit** -- buy USDC with a card via MoonPay
+
+    Deposits are routed to your Hyperliquid address on HyperCore automatically.
+  </Accordion>
+
+  <Accordion title="My deposit is not showing up. What should I do?">
+    Wait 5-10 minutes for the transaction to confirm and bridge. If it still hasn't arrived, verify that you deposited a supported token on a supported network. If the issue persists, reach out in our [Discord](https://discord.gg/tcy4pT7guV) for help.
+  </Accordion>
+
+  <Accordion title="How do I withdraw?">
+    Withdrawals are processed via Unifold. Initiate a withdrawal from the Legend app and choose your destination chain and currency -- Unifold supports withdrawing to many chains and currencies for maximum convenience.
+  </Accordion>
+
+  <Accordion title="My withdrawal is stuck. What should I do?">
+    Withdrawals typically complete within a few minutes. If yours appears stuck, reach out in our [Discord](https://discord.gg/tcy4pT7guV) with your wallet address and we'll help resolve it.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Referrals & Rewards
+
+<AccordionGroup>
+  <Accordion title="How do referrals work?">
+    Every Legend user gets a unique referral link. When someone signs up through your link and trades, you earn a percentage of the builder fee revenue from their trades. Find your referral link in your profile.
+  </Accordion>
+
+  <Accordion title="What is the referral rate?">
+    The base referral rate is **10%** of builder fee revenue. Higher net deposit tiers (deposits minus withdrawals) unlock better rates:
+
+    | Net Deposits   | Referral Rate |
+    |----------------|---------------|
+    | Base           | 10%           |
+    | $5,000+        | 12.5%         |
+    | $50,000+       | 15%           |
+    | $250,000+      | 17.5%         |
+    | $500,000+      | 20%           |
+
+    Tiers are recalculated automatically. Withdrawals lower your net deposit amount, which may reduce your tier.
+  </Accordion>
+
+  <Accordion title="Do shared chart notes count as referrals?">
+    Yes. When you share a chart note or feed item externally, anyone who signs up through that link is automatically counted as your referral.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Social
+
+<AccordionGroup>
+  <Accordion title="What are Clans?">
+    Clans are Legend's team system. Compete together, climb together. Each clan has its own ELO, chat, member list, and shared stats. You can only be in one clan at a time, and clans are capped at 50 members. Clan leaders earn 5% of builder fee revenue from their members' trades.
+  </Accordion>
+
+  <Accordion title="How do I create a Clan?">
+    To create a clan, you must have over **$100,000** in lifetime notional trading volume on Legend. Once created, you can invite friends or recruit from the leaderboard.
+  </Accordion>
+
+  <Accordion title="What is copy-trading?">
+    Copy-trading lets you mirror another trader's positions. You set the dollar amount or percentage of your balance to allocate, and the system matches the target trader's leverage and direction. You can add your own take-profit and stop-loss levels. Copy-trading is available from trader profiles and match spectator views.
+  </Accordion>
+
+  <Accordion title="What chat features are available?">
+    - **Arena chat** -- live chat with your opponent during a match
+    - **Clan chat** -- persistent group chat for your clan
+    - **Direct messages** -- message any trader on the platform
+    - **Group chats** -- private group conversations
+  </Accordion>
+
+  <Accordion title="What appears on the feed?">
+    The feed shows real-time activity from traders you follow and your clanmates: trade entries/exits with PnL, Arena match results, and copy-trading events. You can also view the feed scoped to a specific token chart to see what your network traded at key price levels.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Fees
+
+<AccordionGroup>
+  <Accordion title="What are Legend's trading fees?">
+    Legend follows the Hyperliquid fee model. Fees are based on your rolling 14-day volume. Maker rebates are paid out continuously on each trade. For full details, see the [Fees page](/about/fees) or [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs).
+  </Accordion>
+
+  <Accordion title="What is the builder code fee?">
+    A builder code fee of **0.025%** (2.5 basis points) is applied on top of standard Hyperliquid trading fees for perpetual trades on Legend. A portion of this fee funds referral payouts and clan leader revenue.
+  </Accordion>
+
+  <Accordion title="Are there fees for Arena matches?">
+    Arena wagers are settled directly between players. The only costs are the wager amount itself and standard trading fees incurred during the match.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Note>
+  Can't find your answer? Reach out on [X (Twitter)](https://x.com/legendtrade) or [Discord](https://discord.gg/tcy4pT7guV).
+</Note>

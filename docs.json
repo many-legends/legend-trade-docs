@@ -1,29 +1,27 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "legend.trade docs",
+  "name": "Legend Docs",
   "logo": "/logo.png",
   "colors": {
     "primary": "#ffa318",
-    "light": "#c77700",
-    "dark": "#754600"
+    "light": "#ffa318",
+    "dark": "#c77700"
   },
   "favicon": "/favicon-32x32.png",
   "fonts": {
     "heading": {
-      "family": "Akira",
-      "source": "/fonts/akira/akira-super-bold.woff2",
-      "format": "woff2",
-      "weight": 900
+      "family": "Inter",
+      "weight": 700
     },
     "body": {
       "family": "Inter"
     }
   },
   "metadata": {
-    "og:site_name": "Legend Trade Documentation",
+    "og:site_name": "Legend Docs",
     "og:image": "https://docs.legend.trade/opengraph.png",
-    "twitter:site": "@legenddottrade"
+    "twitter:site": "@legendtrade"
   },
   "styling": {
     "customCss": "/style.css"
@@ -38,14 +36,9 @@
         "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting Started",
-            "pages": [
-              "index"
-            ]
-          },
-          {
             "group": "About",
             "pages": [
+              "index",
               "about/overview",
               "about/why",
               "about/who"
@@ -54,8 +47,7 @@
           {
             "group": "Platform",
             "pages": [
-              "platform/telegram/index",
-              "platform/telegram/commands"
+              "platform/ios"
             ]
           },
           {
@@ -73,15 +65,13 @@
               "arena/index",
               "arena/mechanics",
               "arena/wagers",
-              "arena/ranks-elo",
               "arena/queues"
             ]
           },
           {
-            "group": "Rewards and Points",
+            "group": "Rewards",
             "pages": [
-              "rewards-and-points/referrals-and-rewards",
-              "rewards-and-points/points"
+              "rewards-and-points/referrals-and-rewards"
             ]
           },
           {
@@ -89,17 +79,28 @@
             "pages": [
               "about/fees"
             ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "faq"
+            ]
           }
         ]
       }
     ]
   },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "App",
+        "href": "https://app.legend.trade"
+      }
+    ],
     "primary": {
       "type": "button",
-      "label": "Get Started",
-      "href": "https://legend.trade"
+      "label": "Start Trading",
+      "href": "https://app.legend.trade"
     }
   },
   "contextual": {
@@ -114,5 +115,23 @@
       "vscode"
     ]
   },
-  "footer": {}
+  "footer": {
+    "links": [
+      {
+        "title": "Product",
+        "items": [
+          { "label": "Legend App", "href": "https://app.legend.trade" },
+          { "label": "Arena", "href": "/arena" },
+          { "label": "Fees", "href": "/about/fees" }
+        ]
+      },
+      {
+        "title": "Community",
+        "items": [
+          { "label": "X (Twitter)", "href": "https://x.com/legendtrade" },
+          { "label": "Discord", "href": "https://discord.gg/tcy4pT7guV" }
+        ]
+      }
+    ]
+  }
 }
