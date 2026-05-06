@@ -40,10 +40,6 @@ When you start copying a trader who already has open positions, those positions 
 
 Once the trader fully closes a pre-existing position and opens a new one in the same asset, mirroring resumes normally.
 
-## Position Reconciliation
-
-A background process checks every 30 seconds that your copy wallet's positions match the target trader's. If any divergence is detected (from failed orders, partial fills, or network issues), corrective orders are placed automatically.
-
 ## Stopping a Copy Profile
 
 When you stop copying a trader:
@@ -51,5 +47,3 @@ When you stop copying a trader:
 1. All open positions in your copy wallet are **closed with market orders**
 2. After positions settle, your remaining USDC is **automatically transferred back** to your main wallet
 3. The profile is marked as stopped — no further orders will be placed
-
-This process typically completes within a few minutes. You can monitor the status from the copy trading page.
