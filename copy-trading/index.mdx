@@ -1,0 +1,53 @@
+---
+title: "Copy Trading"
+description: "Automatically mirror the trades of top traders on Legend"
+mode: "wide"
+---
+
+Copy trading lets you automatically mirror another trader's positions. When the trader you're copying opens, closes, or adjusts a position, the same action is reflected in your dedicated copy wallet — proportionally scaled to your deposit size.
+
+This is the fastest way to follow a trader's strategy with real capital, without manually executing each trade yourself.
+
+<Note>
+  Copy trading is currently in **alpha**. Deposits are capped at $100–$500 per trader while we refine the system.
+</Note>
+
+## How It Works
+
+1. **Find a trader** — Browse profiles on Legend. Any trader with open positions can be copied.
+2. **Start copying** — Click "Copy Trade" on their profile. Choose your max leverage and deposit amount.
+3. **Automatic mirroring** — A dedicated sub-wallet is created for each trader you copy. When the target trader executes a trade, a proportional order is placed in your copy wallet within seconds.
+4. **Stop anytime** — When you stop copying, all mirrored positions are closed automatically and your remaining funds are returned to your main wallet.
+
+## Copy Wallet
+
+Each copy profile creates a **separate sub-wallet** on Hyperliquid. Your main trading wallet is never touched by copy trading.
+
+- Funds are isolated per trader — copying Trader A and Trader B uses two separate wallets
+- Your copy wallet balance = your deposit + any trading gains or losses
+- Positions in your copy wallet are fully independent from your main trading positions
+
+## Proportional Sizing
+
+Orders are scaled based on the ratio of your deposit to the target trader's account value.
+
+**Example:** If the trader has $100,000 in equity and you deposit $500, you're mirroring at a 0.5% ratio. When they open a $10,000 BTC long, your copy wallet opens a $50 BTC long.
+
+The sizing respects your max leverage setting — no position will exceed the leverage cap you chose, even if the trader uses higher leverage.
+
+## What Gets Copied
+
+| Action | Copied? |
+|--------|---------|
+| New position opens | Yes — proportionally sized |
+| Position size increase | Yes |
+| Position close | Yes |
+| Partial close / reduce | Yes |
+| Leverage changes | Mirrored up to your max leverage cap |
+| TP/SL orders | Not directly — but closes are mirrored when they trigger |
+
+## What Doesn't Get Copied
+
+- **Pre-existing positions** — If a trader already has an open BTC position when you start copying, that position is skipped. You'll only mirror new activity on BTC after the trader fully closes and re-opens.
+- **Very small trades** — If the proportional order would be less than $10 (Hyperliquid's minimum), it's skipped.
+- **Low-liquidity assets** — Assets with less than $5M in open interest are not mirrored to protect against slippage.

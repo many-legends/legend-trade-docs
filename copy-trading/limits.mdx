@@ -1,0 +1,55 @@
+---
+title: "Limits & Safeguards"
+description: "Copy trading deposit limits, asset restrictions, and safety mechanisms"
+---
+
+Copy trading includes several safeguards to protect copiers during the alpha period.
+
+## Deposit Limits
+
+| Limit | Value | Notes |
+|-------|-------|-------|
+| Minimum deposit | $100 | Per trader you copy |
+| Maximum deposit | $500 | Per trader you copy |
+
+These limits apply per copy profile. If you're copying 3 different traders, each profile has its own $100–$500 range.
+
+Withdrawals must either leave at least $100 in the profile or withdraw everything (stopping the profile).
+
+## Order Limits
+
+| Limit | Value |
+|-------|-------|
+| Minimum order size | $10 notional |
+| Maximum leverage | 50x (configurable per profile) |
+
+If a proportional order would result in less than $10 of notional value, it's skipped. This can happen when copying a trader with a much larger account — very small percentage moves may not meet the minimum.
+
+## Asset Restrictions
+
+To protect against slippage and market manipulation, copy trading restricts which assets are mirrored:
+
+- **Open interest threshold** — Assets with less than $5M in total open interest are not copied
+- **AUM-to-OI ratio** — If the total copy trading capital allocated to an asset exceeds 1% of its open interest, new orders for that asset are paused
+
+These restrictions are evaluated in real-time for each order.
+
+## Pre-Existing Position Protection
+
+When you start copying a trader who already has open positions, those positions are **not mirrored**. This prevents you from entering a trade mid-way — for example, being on the wrong side if the trader sells an existing long.
+
+Once the trader fully closes a pre-existing position and opens a new one in the same asset, mirroring resumes normally.
+
+## Position Reconciliation
+
+A background process checks every 30 seconds that your copy wallet's positions match the target trader's. If any divergence is detected (from failed orders, partial fills, or network issues), corrective orders are placed automatically.
+
+## Stopping a Copy Profile
+
+When you stop copying a trader:
+
+1. All open positions in your copy wallet are **closed with market orders**
+2. After positions settle, your remaining USDC is **automatically transferred back** to your main wallet
+3. The profile is marked as stopped — no further orders will be placed
+
+This process typically completes within a few minutes. You can monitor the status from the copy trading page.

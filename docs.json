@@ -61,6 +61,13 @@
             ]
           },
           {
+            "group": "Copy Trading",
+            "pages": [
+              "copy-trading/index",
+              "copy-trading/limits"
+            ]
+          },
+          {
             "group": "Arena",
             "pages": [
               "arena/index",
