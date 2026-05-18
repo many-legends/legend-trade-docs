@@ -52,6 +52,13 @@
             ]
           },
           {
+            "group": "Trading",
+            "pages": [
+              "trading/index",
+              "trading/order-types"
+            ]
+          },
+          {
             "group": "Social",
             "pages": [
               "social",

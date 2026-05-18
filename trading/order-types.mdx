@@ -1,0 +1,119 @@
+---
+title: "Order Types"
+description: "All order types available on Legend"
+mode: "wide"
+---
+
+Legend supports the full range of order types available on Hyperliquid. For additional details, see [Hyperliquid's order type documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types).
+
+## Market
+
+Executes immediately at the current market price. Best for getting in or out of a position quickly when speed matters more than exact price.
+
+A slippage buffer is automatically applied to protect against price movement between submission and execution.
+
+## Limit
+
+Executes at the specified limit price or better. The order rests on the order book until it is filled, canceled, or expires based on its time-in-force setting.
+
+Limit orders give you precise control over your entry or exit price, but there is no guarantee of execution — the market must reach your price.
+
+## Stop Market
+
+A market order that activates when the mark price reaches your trigger price. Commonly used as a stop loss to exit a position if the market moves against you.
+
+- For longs, the trigger price is set **below** the current price
+- For shorts, the trigger price is set **above** the current price
+
+## Stop Limit
+
+A limit order that activates when the mark price reaches your trigger price. Works like a stop market, but once triggered, places a limit order at your specified price instead of a market order.
+
+Gives more price control than a stop market, but the limit order may not fill if the market moves quickly past your price.
+
+## Take Profit Market
+
+A market order that activates when the mark price reaches your take profit level. Used to automatically close a position and lock in profit at a target price.
+
+- For longs, the trigger price is set **above** the current price
+- For shorts, the trigger price is set **below** the current price
+
+## Take Profit Limit
+
+A limit order that activates when the mark price reaches your take profit level. Works like a take profit market, but places a limit order at your specified price once triggered.
+
+## Scale
+
+Places multiple limit orders distributed across a price range. Useful for building or exiting a position gradually at different price levels instead of placing a single large order.
+
+**Parameters:**
+- **Number of orders** — how many individual limit orders to place
+- **Min / Max price** — the price range for the orders
+- **Size skew** — controls whether orders are equally sized or weighted toward one end of the range (default: equal)
+
+Scale orders support all three [time-in-force](#time-in-force) options.
+
+## TWAP
+
+Time-Weighted Average Price. Splits a large order into smaller sub-orders executed at regular intervals (every 30 seconds) over a set duration. This reduces market impact by spreading execution over time.
+
+**Parameters:**
+- **Duration** — the total execution window
+- **Randomize** — optionally randomize timing within the execution window
+
+<Note>
+  TWAP orders have a **\$300 minimum notional** size (compared to \$10 for other order types).
+</Note>
+
+For full TWAP details, see [Hyperliquid's order type documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types).
+
+---
+
+## Order Modifiers
+
+### Time in Force
+
+Time-in-force (TIF) controls how long an order remains active:
+
+| Setting | Name | Behavior |
+|---------|------|----------|
+| **GTC** | Good Til Cancel | Order rests on the book until filled or manually canceled. This is the default. |
+| **IOC** | Immediate or Cancel | Any portion not immediately filled is canceled. |
+| **ALO** | Add Liquidity Only | Post-only order — rejected if it would immediately match. Guarantees maker fee/rebate. |
+
+### Reduce Only
+
+When enabled, the order can only reduce or close an existing position — it will not open a new position or increase an existing one. Useful for ensuring a stop loss or take profit order doesn't accidentally flip your position.
+
+### Take Profit / Stop Loss (TP/SL)
+
+You can attach take profit and/or stop loss levels when placing a market or limit order. These create linked trigger orders that automatically close the position at your target profit or maximum loss.
+
+- TP and SL are both optional — you can set one or both
+- You can set TP/SL as a fixed price or as a percentage from your entry
+- TP/SL can also be managed on existing positions from the positions table
+
+For full details on TP/SL mechanics, see [Hyperliquid's TP/SL documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl).
+
+### Trailing Stop
+
+Automatically adjusts your stop price as the market moves in your favor. You set a trailing percentage — the stop price follows the market by that percentage distance. If the market reverses by the trailing amount, a market close is triggered.
+
+<Note>
+  Trailing stop and stop loss are mutually exclusive — setting one clears the other.
+</Note>
+
+---
+
+## Quick Reference
+
+| Order Type | Rests on Book | Trigger Required | Best For |
+|-----------|--------------|-----------------|----------|
+| Market | No | No | Immediate execution |
+| Limit | Yes | No | Precise entry/exit price |
+| Stop Market | No | Yes | Stop loss protection |
+| Stop Limit | Yes (after trigger) | Yes | Stop loss with price control |
+| TP Market | No | Yes | Locking in profit |
+| TP Limit | Yes (after trigger) | Yes | Locking in profit with price control |
+| Scale | Yes | No | Gradual position building |
+| TWAP | No (sub-orders) | No | Large orders with minimal impact |

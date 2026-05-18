@@ -1,0 +1,38 @@
+---
+title: "Trading"
+description: "Trading perpetual contracts on Legend"
+mode: "wide"
+---
+
+Legend is built on [Hyperliquid](https://hyperliquid.gitbook.io/hyperliquid-docs), a high-performance on-chain perpetuals exchange. All trades placed on Legend are executed directly on Hyperliquid's order book with the same deep liquidity and low-latency matching.
+
+You can trade perpetual contracts (perps) on all assets available on Hyperliquid — major crypto assets, memecoins, and more as listings are added.
+
+## Margin Modes
+
+Legend supports both margin modes available on Hyperliquid:
+
+- **Cross margin** — the default. Collateral is shared across all cross-margin positions, maximizing capital efficiency. A loss on one position can affect your entire account balance.
+- **Isolated margin** — collateral is locked to a single position. Losses are contained to the margin allocated to that position, but capital efficiency is lower.
+
+You can set the margin mode per asset from the trade form.
+
+For full details on margin mechanics, see [Hyperliquid's margining documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining).
+
+## Leverage
+
+Leverage can be adjusted per asset from 1x up to the maximum allowed for that asset. Higher leverage means less margin is required to open a position, but increases liquidation risk.
+
+Maximum leverage varies by asset and is determined by Hyperliquid's [margin tiers](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margin-tiers).
+
+## Liquidations
+
+If your account equity falls below the maintenance margin requirement, your positions may be liquidated. Hyperliquid uses a two-stage liquidation process — market orders are sent to the order book first, with a backstop liquidation mechanism as a fallback.
+
+For full details, see [Hyperliquid's liquidation documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations).
+
+## Funding Rates
+
+Perpetual contracts use a funding rate mechanism to keep the contract price aligned with the spot index price. Funding is exchanged between long and short holders periodically.
+
+For full details, see [Hyperliquid's funding documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding).
