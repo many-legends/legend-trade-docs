@@ -55,7 +55,8 @@
             "group": "Trading",
             "pages": [
               "trading/index",
-              "trading/order-types"
+              "trading/order-types",
+              "trading/elo"
             ]
           },
           {
@@ -80,7 +81,8 @@
               "arena/index",
               "arena/mechanics",
               "arena/wagers",
-              "arena/queues"
+              "arena/queues",
+              "arena/elo"
             ]
           },
           {

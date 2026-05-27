@@ -1,0 +1,56 @@
+---
+title: "Arena ELO"
+description: "How Arena duel ratings work"
+mode: "wide"
+---
+
+Arena ELO is a chess-style rating system that tracks your competitive performance in 1v1 duel matches. Every decisive duel updates both players' ratings based on who they beat and who they lost to.
+
+## How it works
+
+Arena ELO uses the standard [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) -- the same formula used in chess, esports, and competitive gaming.
+
+- **Starting rating:** 1200
+- **K-factor:** 32 (controls how much each match moves your rating)
+
+When you win against a higher-rated opponent, you gain more points. When you lose to a lower-rated opponent, you lose more points. This means your rating reflects not just your win rate, but the strength of your opponents.
+
+## The formula
+
+Before each match, the system calculates an **expected score** for each player:
+
+$$
+E = \frac{1}{1 + 10^{(R_{opponent} - R_{player}) / 400}}
+$$
+
+After the match, your new rating is:
+
+$$
+R' = R + K \times (S - E)
+$$
+
+Where:
+- **R** is your current rating
+- **K** = 32 (the K-factor)
+- **S** = 1 if you won, 0 if you lost
+- **E** is your expected score from the formula above
+
+### Example
+
+Two players enter a duel:
+- **Player A** has a rating of 1300
+- **Player B** has a rating of 1100
+
+Player A's expected score: `1 / (1 + 10^((1100 - 1300) / 400))` = **0.76**
+
+If Player A wins (expected), they gain `32 × (1 - 0.76)` = **+8 points** (small gain for beating a weaker opponent).
+
+If Player B wins (upset), they gain `32 × (1 - 0.24)` = **+24 points** (large gain for beating a stronger opponent).
+
+## Eligibility
+
+Only **1v1 duels** with a decisive winner affect ELO. Cancelled, in-progress, or drawn matches are skipped. Duels are processed in chronological order so ratings build on each other deterministically.
+
+## Weekly resets
+
+During Season Zero, Arena ELO resets each week. Every player starts the week at 1200 and builds their rating through that week's matches. This keeps the leaderboard fresh and gives everyone a fair shot each week.

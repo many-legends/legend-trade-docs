@@ -1,0 +1,95 @@
+---
+title: "Trading ELO"
+description: "How the composite trader rating works"
+mode: "wide"
+---
+
+Trading ELO is a composite rating from **0 to 2,400** that measures your overall quality as a trader. Unlike Arena ELO (which tracks duel wins), Trading ELO evaluates your real trading performance -- risk management, returns, and capital deployed.
+
+## The formula
+
+Your Trading ELO is the product of three independent factors, each scored between 0 and 1:
+
+$$
+\text{ELO} = 2400 \times \text{riskFactor} \times \text{growthFactor} \times \text{capitalFactor}
+$$
+
+Each factor is **disqualifying** -- if any one of them is zero, your entire score is zero. Great traders need all three: disciplined risk, positive returns, and real capital at stake.
+
+## The three factors
+
+### 1. Risk Factor (Sortino Ratio)
+
+Measures how well you manage downside risk. Uses the [Sortino ratio](https://en.wikipedia.org/wiki/Sortino_ratio), which only penalizes negative volatility (unlike Sharpe, which penalizes all volatility).
+
+$$
+\text{riskFactor} = \frac{\min(\text{Sortino}, 5)}{1 + \min(\text{Sortino}, 5)}
+$$
+
+- Sortino is capped at **5** to prevent traders with zero losing days from maxing out
+- Maximum possible riskFactor: **0.833** (at Sortino = 5)
+- Negative or zero Sortino = 0 (no credit for poor risk management)
+- Sortino is annualized: `(mean return / downside deviation) x sqrt(252)`
+
+### 2. Growth Factor (ROI)
+
+Measures your return on capital. Uses a sigmoid curve applied to the log of returns, which naturally handles both gains and losses.
+
+$$
+\text{growthFactor} = \text{sigmoid}(\text{sign}(\text{ROI}) \times \ln(1 + |\text{ROI}|))
+$$
+
+Where `sigmoid(x) = 1 / (1 + e^(-x}))`.
+
+- ROI is calculated as `realized PnL / peak account value`
+- Positive ROI pushes the score above 0.5; negative ROI pushes it below
+- The log transform means doubling your money (+100%) and halving it (-50%) are treated symmetrically
+- Handles leveraged losses (ROI below -100%) safely
+
+### 3. Capital Factor (Peak Capital)
+
+Measures how much real capital you have at stake. Uses a Hill curve that rewards larger accounts but with diminishing returns.
+
+$$
+\text{capitalFactor} = \text{sigmoid}(\ln(1 + \text{peakCapital} / 1000))
+$$
+
+- **$1,000** is the reference point (produces a factor of ~0.62)
+- **$10,000** produces ~0.76
+- **$100,000** produces ~0.88
+- Zero or negative capital = 0
+
+This factor ensures that ELO reflects real conviction -- trading with significant capital, not just small test positions.
+
+## Confidence ramp
+
+To prevent traders with very few trades from dominating the leaderboard, a confidence adjustment is applied:
+
+- **Minimum 2 closed positions** required for a Sortino ratio to be calculated at all
+- Below **5 closed positions**, your ELO is linearly attenuated toward the baseline
+- At 5+ closed positions, you receive full credit
+
+$$
+\text{final ELO} = 200 + (\text{formula ELO} - 200) \times \min\left(\frac{\text{closed positions}}{5}, 1\right)
+$$
+
+The **floor is 200** -- no trader's ELO drops below this, even with a negative Sortino.
+
+## How it updates
+
+Trading ELO is recalculated every 5 minutes by a background job. It pulls your latest:
+- **Sortino ratio** from closed position returns
+- **Season PnL** from wallet performance metrics
+- **Peak account value** (high water mark) from periodic snapshots
+
+Your ELO is scoped to the current season period and displayed on your profile and the leaderboard.
+
+## Key differences from Arena ELO
+
+| | Trading ELO | Arena ELO |
+|---|---|---|
+| **Range** | 0 -- 2,400 | 1,200+ (unbounded) |
+| **Based on** | Real trading performance | 1v1 duel wins/losses |
+| **Inputs** | Sortino, ROI, peak capital | Win/loss vs. opponent rating |
+| **Starting value** | 200 (baseline) | 1,200 |
+| **Update frequency** | Every 5 minutes | After each duel settles |
