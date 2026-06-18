@@ -45,11 +45,11 @@ To protect against slippage and market manipulation, copy trading restricts whic
 
 These restrictions are evaluated in real-time for each order.
 
-## Pre-Existing Position Protection
+## Pre-Existing Positions
 
-When you start copying a trader who already has open positions, those positions are **not mirrored**. This prevents you from entering a trade mid-way — for example, being on the wrong side if the trader sells an existing long.
+By default, a trader's already-open positions are mirrored when you start copying. If you'd prefer not to enter mid-trade — for example, to avoid being on the wrong side if the trader sells an existing long — enable **Only copy newly opened positions** at setup.
 
-Once the trader fully closes a pre-existing position and opens a new one in the same asset, mirroring resumes normally.
+With that option on, the trader's existing positions are skipped. Mirroring for those assets begins only once the trader fully closes a pre-existing position and opens a new one.
 
 ## Stopping a Copy Profile
 
