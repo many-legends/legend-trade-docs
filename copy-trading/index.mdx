@@ -49,9 +49,9 @@ Some traders charge a **profit share** — a cut of the gains they generate for 
 
 ## Pre-Existing Positions
 
-By default, the trader's currently-open positions are mirrored into your copy wallet as soon as you start copying — proportionally sized, alongside any new trades they make.
+By default, when you start copying a trader, their currently-open positions are **skipped** — you'll only mirror trades they open after you start. This keeps you from entering a trade mid-way, for example ending up on the wrong side if the trader sells an existing long.
 
-If you'd rather start clean, turn on **Only copy newly opened positions** when you set up the copy. With it enabled, the trader's existing positions are skipped, and you'll only mirror activity they open after you start.
+This is controlled by the **Only copy newly opened positions** toggle, which is on by default. If you'd rather also mirror the trader's current open positions, turn it off when you set up the copy.
 
 ## What Gets Copied
 
