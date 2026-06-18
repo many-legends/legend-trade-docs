@@ -47,6 +47,12 @@ Some traders charge a **profit share** — a cut of the gains they generate for 
 - The maximum any trader can charge is **20%**.
 - Many traders charge nothing — the copy screen always shows the exact rate, or none.
 
+## Pre-Existing Positions
+
+By default, the trader's currently-open positions are mirrored into your copy wallet as soon as you start copying — proportionally sized, alongside any new trades they make.
+
+If you'd rather start clean, turn on **Only copy newly opened positions** when you set up the copy. With it enabled, the trader's existing positions are skipped, and you'll only mirror activity they open after you start.
+
 ## What Gets Copied
 
 | Action | Copied? |
@@ -60,6 +66,5 @@ Some traders charge a **profit share** — a cut of the gains they generate for 
 
 ## What Doesn't Get Copied
 
-- **Pre-existing positions** — If a trader already has an open BTC position when you start copying, that position is skipped. You'll only mirror new activity on BTC after the trader fully closes and re-opens.
 - **Very small trades** — If the proportional order would be less than $10 (Hyperliquid's minimum), it's skipped.
 - **Low-liquidity assets** — Assets with less than $5M in open interest are not mirrored to protect against slippage.
