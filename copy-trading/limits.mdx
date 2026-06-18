@@ -9,21 +9,28 @@ Copy trading includes several safeguards to protect copiers during the alpha per
 
 | Limit | Value | Notes |
 |-------|-------|-------|
-| Minimum deposit | $100 | Per trader you copy |
+| Minimum deposit | $250 | Per trader you copy |
 | Maximum deposit | $500 | Per trader you copy |
 
-These limits apply per copy profile. If you're copying 3 different traders, each profile has its own $100–$500 range.
+These limits apply per copy profile. If you're copying 3 different traders, each profile has its own $250–$500 range.
 
-Withdrawals must either leave at least $100 in the profile or withdraw everything (stopping the profile).
+Withdrawals must either leave at least $250 in the profile or withdraw everything (stopping the profile).
 
 ## Order Limits
 
 | Limit | Value |
 |-------|-------|
 | Minimum order size | $10 notional |
-| Maximum leverage | 50x (configurable per profile) |
 
 If a proportional order would result in less than $10 of notional value, it's skipped. This can happen when copying a trader with a much larger account — very small percentage moves may not meet the minimum.
+
+## Leverage
+
+Your copy wallet mirrors the trader's leverage and margin mode (isolated or cross) exactly — there's no separate leverage cap to set. Risk is controlled by your deposit size, since every position is scaled down proportionally to the amount you allocated.
+
+## Profit Share
+
+Traders can charge a profit share of up to **20%** on the gains they generate for you. The rate is shown before you start copying and applies only to winning trades — positions that close at a loss incur no profit share.
 
 ## Asset Restrictions
 
