@@ -30,12 +30,6 @@
     "default": "dark",
     "strict": true
   },
-  "redirects": [
-    {
-      "source": "/index",
-      "destination": "/"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
