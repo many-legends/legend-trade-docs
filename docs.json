@@ -56,7 +56,8 @@
             "pages": [
               "trading/index",
               "trading/order-types",
-              "trading/elo"
+              "trading/elo",
+              "about/fees"
             ]
           },
           {
@@ -89,12 +90,6 @@
             "group": "Rewards",
             "pages": [
               "rewards-and-points/referrals-and-rewards"
-            ]
-          },
-          {
-            "group": "Fees",
-            "pages": [
-              "about/fees"
             ]
           },
           {
