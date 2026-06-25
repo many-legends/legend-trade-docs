@@ -1,82 +1,37 @@
 ---
 title: "Fees"
-description: "Trading fees on Legend"
+description: "Fee schedule for trading on Legend"
 mode: "wide"
 ---
 
-Legend trades are executed on [Hyperliquid](https://hyperliquid.xyz). Your total fee on each trade has two parts: the **Hyperliquid network fee** and the **Legend platform fee**.
+Legend is built on [Hyperliquid](https://hyperliquid.xyz), one of the highest-performance onchain order books available. All trades are executed directly on the Hyperliquid L1 — your assets remain in your own wallet and are never custodied by Legend.
 
-## Hyperliquid Network Fees
+Legend applies a flat 0.05% (5 bps) platform fee on perpetual futures trades, on top of Hyperliquid's standard network fees. The more you trade, the lower your total fees become.
 
-Hyperliquid charges volume-tiered maker/taker fees based on your rolling 14-day trading volume, assessed at the end of each day in UTC.
+## Referral Fee Discounts
 
-There are separate fee schedules for perpetuals and spot. Both count toward a single volume tier, with spot volume weighted double:
+If you signed up through a referral link, you're eligible for discounts on your trading fees. A portion of the platform fees you pay are returned to you as claimable rebates. These rebates accrue automatically on your trades and can be claimed directly in the app from the Rewards section in your profile.
 
-**14d weighted volume** = (14d perps volume) + 2 &times; (14d spot volume)
+For more details on how referrals work and additional ways to earn, see [Referrals and Rewards](/rewards-and-points/referrals-and-rewards).
 
-### Perpetuals
+## Hyperliquid Fee Schedule
 
-| 14d Volume | Maker | Taker |
-| --- | --- | --- |
-| \< $5M | 0.0150% | 0.0450% |
-| $5M+ | 0.0130% | 0.0400% |
-| $25M+ | 0.0120% | 0.0375% |
-| $100M+ | 0.0100% | 0.0350% |
-| $500M+ | 0.0080% | 0.0325% |
-| $1B+ | 0.0060% | 0.0300% |
-| $3B+ | 0.0050% | 0.0275% |
-| $5B+ | 0.0030% | 0.0250% |
+Hyperliquid charges volume-tiered maker/taker fees based on your rolling 14-day trading volume.
 
-### Spot
+| Tier | 14d Volume | Taker | Maker |
+| --- | --- | --- | --- |
+| 0 | \< $5M | 0.045% | 0.015% |
+| 1 | $5M+ | 0.040% | 0.013% |
+| 2 | $25M+ | 0.038% | 0.012% |
+| 3 | $100M+ | 0.035% | 0.010% |
+| 4 | $500M+ | 0.033% | 0.008% |
+| 5 | $1B+ | 0.030% | 0.006% |
+| 6 | $3B+ | 0.028% | 0.005% |
+| 7 | $5B+ | 0.025% | 0.003% |
 
-| 14d Volume | Maker | Taker |
-| --- | --- | --- |
-| \< $5M | 0.0400% | 0.0700% |
-| $5M+ | 0.0350% | 0.0650% |
-| $25M+ | 0.0300% | 0.0600% |
-| $100M+ | 0.0250% | 0.0550% |
-| $500M+ | 0.0200% | 0.0500% |
-| $1B+ | 0.0150% | 0.0400% |
-| $3B+ | 0.0100% | 0.0350% |
-| $5B+ | 0.0050% | 0.0250% |
+What to know about these fees:
 
-Stable-pair spot markets (e.g. USDC/USDT) are charged at **0.2&times;** the standard spot rate.
-
-**Maker rebates** are paid out on each fill directly to your trading wallet when your maker rate is negative.
-
-Sub-account volume counts toward your master account, and all sub-accounts share the same fee tier.
-
-### Staking Discount
-
-Staking HYPE on Hyperliquid reduces your network trading fees. See [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees) for the full staking discount schedule.
-
-## Legend Platform Fee
-
-A platform fee (builder code fee) is charged on every trade placed through Legend, on top of the Hyperliquid network fee:
-
-| Market | Platform Fee |
-| --- | --- |
-| Perpetuals | 0.05% |
-| Spot | 0.25% |
-
-A portion of this fee funds [referral payouts and clan leader rewards](/rewards-and-points/referrals-and-rewards).
-
-## Total Fee
-
-Your total fee per trade is the sum of both components:
-
-**Total fee** = Hyperliquid network fee + Legend platform fee
-
-For example, a taker perpetual trade at the base volume tier costs:
-
-- Hyperliquid taker fee: 0.045%
-- Legend platform fee: 0.05%
-- **Total: 0.095%**
-
-## Referred User Cashback
-
-Users who signed up through a referral link earn **10% cashback** on Legend platform fees from losing trades. This cashback accrues automatically and can be claimed from the Rewards section in your profile.
-
-<Note>
-  For the complete Hyperliquid fee schedule including staking discounts and additional details, see [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees).
-</Note>
+- **Volume-tiered pricing** — Fees are based on your rolling 14-day trading volume, assessed at the end of each day (UTC). Higher volume unlocks lower fee tiers automatically.
+- **Maker rebates** — When you add liquidity (maker orders), rebates are paid out continuously on each trade directly to your wallet.
+- **Sub-account sharing** — Sub-account volume counts toward your master account, and all sub-accounts share the same fee tier.
+- **HYPE staking discounts** — Staking HYPE on Hyperliquid further reduces your network fees. See [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees) for the full staking discount schedule.
