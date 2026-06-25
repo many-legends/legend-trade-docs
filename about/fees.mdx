@@ -4,19 +4,13 @@ description: "Fee schedule for trading on Legend"
 mode: "wide"
 ---
 
-Legend applies a uniform 0.05% (5 bps) platform fee on perpetual futures trades, on top of Hyperliquid's volume-tiered network fees.
+Legend is built on [Hyperliquid](https://hyperliquid.xyz), one of the highest-performance onchain order books available. All trades are executed directly on the Hyperliquid L1 — your assets remain in your own wallet and are never custodied by Legend.
 
-What to know about Legend fees:
-
-- Fees are based on your account's rolling 14-day trading volume.
-- Fees are assessed at the end of each day (UTC).
-- Maker rebates are paid out continuously on each trade directly to your wallet.
-- Staking HYPE on Hyperliquid reduces your network fees.
-- A portion of the Legend platform fee funds [referral payouts and clan leader rewards](/rewards-and-points/referrals-and-rewards).
+Legend applies a small platform fee on top of Hyperliquid's volume-tiered network fees. The more you trade, the lower your total fees become.
 
 ## Fee Schedule
 
-The table below shows total fees for Legend traders (Hyperliquid network fee + 0.05% Legend platform fee).
+The table below shows total fees for Legend traders, inclusive of both the Hyperliquid network fee and the Legend platform fee.
 
 | Tier | 14d Volume | Taker | Maker |
 | --- | --- | --- | --- |
@@ -29,7 +23,12 @@ The table below shows total fees for Legend traders (Hyperliquid network fee + 0
 | 6 | $3B+ | 0.078% | 0.055% |
 | 7 | $5B+ | 0.075% | 0.053% |
 
-Sub-account volume counts toward your master account, and all sub-accounts share the same fee tier.
+What to know about Legend fees:
+
+- **Volume-tiered pricing** — Fees are based on your rolling 14-day trading volume, assessed at the end of each day (UTC). Higher volume unlocks lower fee tiers automatically.
+- **Maker rebates** — When you add liquidity (maker orders), rebates are paid out continuously on each trade directly to your wallet.
+- **Sub-account sharing** — Sub-account volume counts toward your master account, and all sub-accounts share the same fee tier.
+- **HYPE staking discounts** — Staking HYPE on Hyperliquid further reduces your network fees. See [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees) for the full staking discount schedule.
 
 ## Fee Breakdown
 
@@ -37,11 +36,13 @@ Each trade fee has two components:
 
 | Component | Fee |
 | --- | --- |
-| Legend platform fee | 0.05% (fixed) |
+| Legend platform fee | Fixed per trade |
 | Hyperliquid network fee | Variable (volume-tiered) |
 
-The Hyperliquid network fee decreases as your 14-day trading volume increases. Staking HYPE on Hyperliquid provides additional discounts on the network fee. See [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees) for the full staking discount schedule.
+The Hyperliquid network fee decreases as your 14-day trading volume increases. Combined with HYPE staking discounts, active traders can significantly reduce their total trading costs.
 
-## Referred User Cashback
+## Referral Fee Discounts
 
-Users who signed up through a referral link earn **10% cashback** on Legend platform fees from losing trades. This cashback accrues automatically and can be claimed from the Rewards section in your profile.
+If you signed up through a referral link, you're eligible for discounts on your trading fees. A portion of the platform fees you pay are returned to you as claimable rebates. These rebates accrue automatically on your trades and can be claimed directly in the app from the Rewards section in your profile.
+
+For more details on how referrals work and additional ways to earn, see [Referrals and Rewards](/rewards-and-points/referrals-and-rewards).
