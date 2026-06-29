@@ -18,6 +18,7 @@ There are separate fee schedules for perps vs spot. Both count toward your fee t
 
 A builder code fee is applied on top of trading fees:
 
-- 0.05% for perpetuals on Hyperliquid
+- **Perpetuals:** 0.05%, applied to both buys and sells.
+- **Spot:** 0.25%, applied to **sells only**. On Hyperliquid, builder fees are collected in the quote asset (USDC), so they apply to the sell side of a spot trade (where you receive USDC) and not to the buy side.
 
 For full details on Hyperliquid's fee tiers and staking discounts, see [Hyperliquid's fee documentation](https://hyperliquid.gitbook.io/hyperliquid-docs).
