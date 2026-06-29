@@ -57,7 +57,11 @@ A platform fee (builder code fee) is charged on every trade placed through Legen
 | Market | Platform Fee |
 | --- | --- |
 | Perpetuals | 0.05% |
-| Spot | 0.25% |
+| Spot | 0.25% (sells only) |
+
+<Note>
+  The spot platform fee applies to **sells only**. On Hyperliquid, builder fees are collected in the quote asset (USDC), so they apply to the sell side of a spot trade (where you receive USDC) and not to the buy side.
+</Note>
 
 A portion of this fee funds [referral payouts and clan leader rewards](/rewards-and-points/referrals-and-rewards).
 
