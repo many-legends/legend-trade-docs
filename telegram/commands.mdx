@@ -1,0 +1,100 @@
+---
+title: "Telegram Commands"
+description: "Every command the Legend Telegram bot understands"
+mode: "wide"
+---
+
+This is the full command reference for [@legend_trade_bot](https://t.me/legend_trade_bot). New here? Start with [Legend on Telegram](/telegram) to connect your account first.
+
+<Note>
+  **Guided or one-line.** Most trading commands work either way. Send a command **bare** (e.g. `/long`) and the bot walks you through each step; pass **arguments** (e.g. `/long btc 5 100`) to skip straight to confirmation. Arguments in `[brackets]` are optional; `<angle brackets>` are required.
+</Note>
+
+## Account & wallet
+
+| Command | Description |
+| --- | --- |
+| `/start` | Your profile and a live account snapshot — equity, withdrawable, open positions. |
+| `/wallet` | Your deposit address and balances. |
+| `/settings` | Bot settings — toggle **ghost mode** (private trades) and **bypass trade confirmations**. |
+| `/invite` | Your referral links and how many traders you've referred. |
+| `/help` | Show the full command list inside the chat. |
+
+## Trading
+
+The order for opening a position is `TICKER LEVERAGE MARGIN`.
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/long` | `/long [symbol] [leverage] [size $]` | Open a long. Example: `/long btc 5 100` |
+| `/short` | `/short [symbol] [leverage] [size $]` | Open a short. Example: `/short eth 10 250` |
+| `/close` | `/close [symbol] [percent]` | Close a position — defaults to 100%. Example: `/close btc 50` closes half. |
+
+## Orders
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/limit` | `/limit long\|short <symbol> <lev> <price> <margin> [iso\|cross]` | Resting limit entry. Example: `/limit long btc 5 60000 100` |
+| `/stoploss` | `/stoploss [symbol] [price] [percent]` | Reduce-only stop loss on an open position. |
+| `/takeprofit` | `/takeprofit [symbol] [price] [percent]` | Reduce-only take profit on an open position. |
+| `/stoplimit` | `/stoplimit [symbol] [trigger] [limit] [percent]` | Stop that places a limit order when the trigger is hit. |
+| `/takelimit` | `/takelimit [symbol] [trigger] [limit] [percent]` | Take-profit that places a limit order when the trigger is hit. |
+| `/twap` | `/twap [long\|short] [symbol] [$size] [minutes]` | Split a large order into slices over time. Example: `/twap long btc $500 60` |
+| `/orders` | `/orders` | View your open orders and cancel them with inline buttons. |
+
+<Tip>
+  Not sure about an order type? See [Order Types](/trading/order-types) for how each one behaves.
+</Tip>
+
+## Positions & PnL
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/positions` | `/positions [@user]` | Your open positions, or another trader's if you pass their handle. |
+
+## Markets & charts
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/markets` | `/markets` | Top markets and their 24h change. |
+| `price` | `price <symbol>` | Quick price for a ticker. Example: `price mu` (no slash needed). |
+| `/chart` | `/chart <symbol> [interval] [indicators]` | A price chart. Also `/c` or just `lg`. |
+
+**Chart options:** add indicators like `bb`, `sma50`, `ema20`, or `vwap` — combine up to four:
+
+```
+lg btc 1h bb ema50
+```
+
+Compare two assets with a **ratio chart**:
+
+```
+lg btc/eth 1d
+```
+
+## Alerts
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/alert` | `/alert <symbol> <price>` | One-shot price alert — the bot messages you when the price is hit. Example: `/alert btc 70000` |
+
+## Social & leaderboards
+
+| Command | Syntax | Description |
+| --- | --- | --- |
+| `/leaderboard` | `/leaderboard [1d\|7d\|30d\|all] [global]` | Group leaderboard by PnL. In a DM it defaults to the global leaderboard. |
+| `/user` | `/user <username>` | Look up a trader's stats. |
+| `/clan` | `/clan [name]` | Top clans, or look up a specific clan by name. |
+
+## Moving funds
+
+For your security, moving money is handled on the website — these commands link you there.
+
+| Command | Description |
+| --- | --- |
+| `/withdraw` · `/send` | Withdraw or send funds — opens the app. |
+| `/export` | Export your wallet's private key — opens the app. |
+
+<Warning>
+  The bot can trade on your behalf but **cannot move your funds**. Withdrawals and key export always happen on [app.legend.trade](https://app.legend.trade), never in chat.
+</Warning>

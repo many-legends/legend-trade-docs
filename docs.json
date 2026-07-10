@@ -52,6 +52,13 @@
             ]
           },
           {
+            "group": "Telegram",
+            "pages": [
+              "telegram/index",
+              "telegram/commands"
+            ]
+          },
+          {
             "group": "Trading",
             "pages": [
               "trading/index",

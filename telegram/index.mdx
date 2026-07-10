@@ -1,0 +1,92 @@
+---
+title: "Legend on Telegram"
+description: "Trade perps, track positions, set alerts, and compete — all from Telegram"
+mode: "wide"
+---
+
+The Legend Telegram bot lets you trade directly from a chat. Open longs and shorts, manage orders, check your PnL, pull up charts, set price alerts, and climb group leaderboards — solo in a DM or with friends in a group chat.
+
+It runs on the **same Legend account and wallet** you use on the web and mobile apps. Nothing is a separate balance: a trade you place in Telegram shows up on the app instantly, and vice versa.
+
+<Card title="Open the bot" icon="telegram" href="https://t.me/legend_trade_bot">
+  @legend_trade_bot — start a chat and send `/start`.
+</Card>
+
+## Connect your account
+
+The bot recognizes you by linking your Telegram to your existing Legend account. This is a one-time setup.
+
+<Steps>
+  <Step title="Create a Legend account">
+    If you don't have one yet, sign up at [app.legend.trade](https://app.legend.trade). Your trading wallet is created automatically.
+  </Step>
+  <Step title="Start the bot">
+    Open [@legend_trade_bot](https://t.me/legend_trade_bot) and send `/start`. Until you link, the bot works in read-only mode — you can look up traders and browse markets, but not trade.
+  </Step>
+  <Step title="Link Telegram in the app">
+    In the Legend app, go to **Settings → Connected accounts → Telegram → Connect**. Telegram opens an authorization prompt; approve it and you're returned to the app with your accounts linked.
+  </Step>
+  <Step title="You're connected">
+    Back in the bot, send `/start` again. It now shows your live snapshot — equity, withdrawable balance, and open positions — and every trading command is unlocked.
+  </Step>
+</Steps>
+
+<Note>
+  Linking uses your existing Legend wallet — the bot trades from your main account, signed securely on Legend's servers. **No private keys are ever shared in chat.** Moving money out (`/withdraw`, `/export`) is intentionally website-only.
+</Note>
+
+## Fund your account
+
+The bot spends from your main Legend wallet, so funding happens on the app once:
+
+- **Deposit** on [app.legend.trade](https://app.legend.trade) (or the mobile app).
+- In the bot, `/wallet` shows your deposit address and current balances at any time.
+
+## Place your first trade
+
+Every trading command works two ways: send it **bare** to be walked through step-by-step, or pass **arguments** to skip straight to the confirmation.
+
+```
+/long btc 5 100
+```
+
+That's a **5×** long on **BTC** with **$100** of margin — the order is `TICKER LEVERAGE MARGIN`. Confirm it and you're in. Then:
+
+- `/positions` — see your open positions and unrealized PnL
+- `/close btc` — close it (append a percentage like `/close btc 50` to close half)
+
+<Tip>
+  Prefer to be guided? Just send `/long` with no arguments and the bot will ask for the ticker, leverage, and size one step at a time.
+</Tip>
+
+See the full list on the [Commands](/telegram/commands) page.
+
+## Trade with friends
+
+Add the bot to a group chat to turn trading into a competition:
+
+- **Group leaderboard** — `/leaderboard` ranks everyone in the chat by PnL over `1d`, `7d`, `30d`, or `all`.
+- **Trade cards** — when you trade, the bot posts a card of your fill to the shared group so everyone sees the action.
+- **Referrals** — invites sent from a group are attributed to the group, so you get credit for bringing traders in (`/invite`).
+
+## Privacy & ghost mode
+
+By default, your fills are broadcast as cards to the group chats you share with the bot. If you'd rather trade quietly, turn on **ghost mode** — your trades stay private and are never posted.
+
+- The bot asks once, during onboarding, whether you want ghost mode on.
+- Change it anytime with `/settings`.
+
+## Custody & safety
+
+- The bot trades using your Legend **session signer** — it can place, modify, and cancel orders, but it **cannot move your money**.
+- **Withdrawals and private-key export are website-only**, by design (`/withdraw` and `/export` link you to the app).
+- You can unlink Telegram at any time under **Settings → Connected accounts**.
+
+<CardGroup cols={2}>
+  <Card title="All commands" icon="terminal" href="/telegram/commands">
+    The complete command reference — trading, orders, charts, alerts, and social.
+  </Card>
+  <Card title="Order types" icon="chart-candlestick" href="/trading/order-types">
+    How market, limit, stop, take-profit, and TWAP orders work on Legend.
+  </Card>
+</CardGroup>
