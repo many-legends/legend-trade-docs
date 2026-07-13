@@ -141,20 +141,40 @@
     ]
   },
   "footer": {
+    "socials": {
+      "x": "https://x.com/legendtrade",
+      "instagram": "https://www.instagram.com/app.legend",
+      "discord": "https://discord.gg/tcy4pT7guV"
+    },
     "links": [
       {
         "title": "Product",
         "items": [
-          { "label": "Legend App", "href": "https://app.legend.trade" },
-          { "label": "Arena", "href": "/arena" },
-          { "label": "Fees", "href": "/about/fees" }
+          { "label": "Trade", "href": "https://app.legend.trade" },
+          { "label": "Mobile App", "href": "https://legend.trade/mobile" },
+          { "label": "Esports", "href": "https://legend.trade/esports" }
         ]
       },
       {
-        "title": "Community",
+        "title": "Resources",
         "items": [
-          { "label": "X (Twitter)", "href": "https://x.com/legendtrade" },
-          { "label": "Discord", "href": "https://discord.gg/tcy4pT7guV" }
+          { "label": "Blog", "href": "https://legend.trade/blog" },
+          { "label": "Learn", "href": "https://legend.trade/learn" },
+          { "label": "FAQ", "href": "https://legend.trade/faq" }
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          { "label": "Careers", "href": "https://legend.trade/careers" },
+          { "label": "Creators", "href": "https://legend.trade/creators" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "items": [
+          { "label": "Privacy Policy", "href": "https://legend.trade/privacy" },
+          { "label": "Terms of Service", "href": "https://legend.trade/terms" }
         ]
       }
     ]
