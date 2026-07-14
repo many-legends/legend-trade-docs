@@ -9,7 +9,7 @@ Copy trading lets you automatically mirror another trader's positions. When the 
 This is the fastest way to follow a trader's strategy with real capital, without manually executing each trade yourself.
 
 <Note>
-  Copy trading is currently in **alpha**. Allocations range from $50 to $2,500 per trader.
+  Copy trading is currently in **alpha**. Allocations range from \$50 to \$2500 per trader.
 </Note>
 
 ## How It Works
@@ -28,14 +28,14 @@ Each copy profile uses a **separate sub-wallet** on Hyperliquid. Your main tradi
 - Positions in your copy wallet are fully independent from your main trading positions
 
 <Note>
-  If a brand-new Hyperliquid sub-wallet has to be created for your copy, a one-time network fee of around $1 may be deducted when the wallet is first activated. This is a Hyperliquid fee, not a Legend charge — and if you've copy traded before, Legend reuses a previous copy wallet and no fee applies.
+  If a brand-new Hyperliquid sub-wallet has to be created for your copy, a one-time Hyperliquid network fee of around \$1 may be deducted when the wallet is first activated. This is a Hyperliquid fee, not a Legend charge — and if you've copy traded before, Legend reuses a previous copy wallet and no fee applies.
 </Note>
 
 ## Proportional Sizing
 
 Orders are scaled based on the ratio of your copy wallet's balance to the target trader's account value.
 
-**Example:** If the trader has $100,000 in equity and you allocate $500, you're mirroring at a 0.5% ratio. When they open a $10,000 BTC long, your copy wallet opens a $50 BTC long.
+**Example:** If the trader has \$100,000 in equity and you allocate \$500, you're mirroring at a 0.5% ratio. When they open a \$10,000 BTC long, your copy wallet opens a \$50 BTC long.
 
 Your copy wallet mirrors the trader's leverage and margin mode (isolated or cross) exactly — there's no separate leverage cap to choose. Because every position is scaled down to your allocation, your dollar risk stays proportional even when the trader runs high leverage.
 
@@ -61,8 +61,8 @@ With the toggle on, the trader's original stake in an asset is never mirrored �
 
 You stay in control of your money the whole time:
 
-- **Add funds** — Top up an active copy anytime, as long as your total allocation stays within the $50–$2,500 range.
-- **Withdraw part of your balance** — Withdraw anytime, including gains if you're in profit. Your positions scale down proportionally to match the new balance. A partial withdrawal must leave at least $50 in the copy.
+- **Add funds** — Top up an active copy anytime, as long as your total allocation stays within the \$50–\$2500 range.
+- **Withdraw part of your balance** — Withdraw anytime, including gains if you're in profit. Your positions scale down proportionally to match the new balance. A partial withdrawal must leave at least \$50 in the copy.
 - **Withdraw everything / stop** — Withdrawing your full balance stops the copy: all mirrored positions are closed with market orders and your remaining funds are transferred back to your main wallet automatically.
 
 ## What Gets Copied
@@ -78,8 +78,8 @@ You stay in control of your money the whole time:
 
 ## What Doesn't Get Copied
 
-- **Very small trades** — If the proportional order would be less than $10 (Hyperliquid's minimum), it's skipped.
-- **Low-liquidity assets** — Assets with less than $5M in open interest are not mirrored to protect against slippage.
+- **Very small trades** — If the proportional order would be less than \$10 (Hyperliquid's minimum), it's skipped.
+- **Low-liquidity assets** — Assets with less than \$5M in open interest are not mirrored to protect against slippage.
 
 ## Copying a Single Trade
 
