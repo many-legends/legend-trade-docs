@@ -85,12 +85,6 @@
             ]
           },
           {
-            "group": "Capital",
-            "pages": [
-              "capital"
-            ]
-          },
-          {
             "group": "Arena",
             "pages": [
               "arena/index",
