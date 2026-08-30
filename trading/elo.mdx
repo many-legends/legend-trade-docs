@@ -14,7 +14,7 @@ $$
 \text{ELO} = 2400 \times \text{riskFactor} \times \text{growthFactor} \times \text{capitalFactor}
 $$
 
-Each factor is **disqualifying** -- if any one of them is zero, your entire score is zero. Great traders need all three: disciplined risk, positive returns, and real capital at stake.
+The factors combine risk-adjusted performance, return, and peak capital. The risk factor has a floor so a missing or non-positive Sortino does not erase the rest of a trader's performance signal.
 
 ## The three factors
 
@@ -28,7 +28,7 @@ $$
 
 - Sortino is capped at **5** to prevent traders with zero losing days from maxing out
 - Maximum possible riskFactor: **0.833** (at Sortino = 5)
-- Negative or zero Sortino = 0 (no credit for poor risk management)
+- Missing, negative, or zero Sortino uses a **0.2 risk-factor floor**
 - Sortino is annualized: `(mean return / downside deviation) x sqrt(252)`
 
 ### 2. Growth Factor (ROI)

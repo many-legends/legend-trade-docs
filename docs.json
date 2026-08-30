@@ -80,7 +80,14 @@
             "group": "Copy Trading",
             "pages": [
               "copy-trading/index",
+              "copy-trading/autocopy",
               "copy-trading/limits"
+            ]
+          },
+          {
+            "group": "Capital",
+            "pages": [
+              "capital"
             ]
           },
           {
