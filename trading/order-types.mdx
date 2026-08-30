@@ -16,7 +16,7 @@ A slippage buffer is automatically applied to protect against price movement bet
 
 Executes at the specified limit price or better. The order rests on the order book until it is filled, canceled, or expires based on its time-in-force setting.
 
-Limit orders give you precise control over your entry or exit price, but there is no guarantee of execution — the market must reach your price.
+Limit orders give you precise control over your entry or exit price, but there is no guarantee of execution -- the market must reach your price.
 
 ## Stop Market
 
@@ -47,9 +47,9 @@ A limit order that activates when the mark price reaches your take profit level.
 Places multiple limit orders distributed across a price range. Useful for building or exiting a position gradually at different price levels instead of placing a single large order.
 
 **Parameters:**
-- **Number of orders** — how many individual limit orders to place
-- **Min / Max price** — the price range for the orders
-- **Size skew** — controls whether orders are equally sized or weighted toward one end of the range (default: equal)
+- **Number of orders** -- how many individual limit orders to place
+- **Min / Max price** -- the price range for the orders
+- **Size skew** -- controls whether orders are equally sized or weighted toward one end of the range (default: equal)
 
 Scale orders support all three [time-in-force](#time-in-force) options.
 
@@ -58,11 +58,11 @@ Scale orders support all three [time-in-force](#time-in-force) options.
 Time-Weighted Average Price. Splits a large order into smaller sub-orders executed at regular intervals (every 30 seconds) over a set duration. This reduces market impact by spreading execution over time.
 
 **Parameters:**
-- **Duration** — the total execution window
-- **Randomize** — optionally randomize timing within the execution window
+- **Duration** -- the total execution window
+- **Randomize** -- optionally randomize timing within the execution window
 
 <Note>
-  TWAP orders have a **\$300 minimum notional** size (compared to \$10 for other order types).
+  TWAP orders have a **\$100 minimum total notional** and can run from **5 minutes to 7 days**.
 </Note>
 
 For full TWAP details, see [Hyperliquid's order type documentation](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types).
@@ -79,17 +79,17 @@ Time-in-force (TIF) controls how long an order remains active:
 |---------|------|----------|
 | **GTC** | Good Til Cancel | Order rests on the book until filled or manually canceled. This is the default. |
 | **IOC** | Immediate or Cancel | Any portion not immediately filled is canceled. |
-| **ALO** | Add Liquidity Only | Post-only order — rejected if it would immediately match. Guarantees maker fee/rebate. |
+| **ALO** | Add Liquidity Only | Post-only order -- rejected if it would immediately match. Guarantees maker fee/rebate. |
 
 ### Reduce Only
 
-When enabled, the order can only reduce or close an existing position — it will not open a new position or increase an existing one. Useful for ensuring a stop loss or take profit order doesn't accidentally flip your position.
+When enabled, the order can only reduce or close an existing position -- it will not open a new position or increase an existing one. Useful for ensuring a stop loss or take profit order doesn't accidentally flip your position.
 
 ### Take Profit / Stop Loss (TP/SL)
 
 You can attach take profit and/or stop loss levels when placing a market or limit order. These create linked trigger orders that automatically close the position at your target profit or maximum loss.
 
-- TP and SL are both optional — you can set one or both
+- TP and SL are both optional -- you can set one or both
 - You can set TP/SL as a fixed price or as a percentage from your entry
 - TP/SL can also be managed on existing positions from the positions table
 
@@ -97,10 +97,10 @@ For full details on TP/SL mechanics, see [Hyperliquid's TP/SL documentation](htt
 
 ### Trailing Stop
 
-Automatically adjusts your stop price as the market moves in your favor. You set a trailing percentage — the stop price follows the market by that percentage distance. If the market reverses by the trailing amount, a market close is triggered.
+Automatically adjusts your stop price as the market moves in your favor. You set a trailing percentage -- the stop price follows the market by that percentage distance. If the market reverses by the trailing amount, a market close is triggered.
 
 <Note>
-  Trailing stop and stop loss are mutually exclusive — setting one clears the other.
+  Trailing stop and stop loss are mutually exclusive -- setting one clears the other.
 </Note>
 
 ---

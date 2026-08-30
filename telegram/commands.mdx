@@ -14,9 +14,9 @@ This is the full command reference for [@legend_trade_bot](https://t.me/legend_t
 
 | Command | Description |
 | --- | --- |
-| `/start` | Your profile and a live account snapshot — equity, withdrawable, open positions. |
+| `/start` | Your profile and a live account snapshot -- equity, withdrawable, open positions. |
 | `/wallet` | Your deposit address and balances. |
-| `/settings` | Bot settings — toggle **ghost mode** (private trades) and **bypass trade confirmations**. |
+| `/settings` | Bot settings -- toggle **ghost mode** (private trades) and **bypass trade confirmations**. |
 | `/invite` | Your referral links and how many traders you've referred. |
 | `/help` | Show the full command list inside the chat. |
 
@@ -28,7 +28,7 @@ The order for opening a position is `TICKER LEVERAGE MARGIN`.
 | --- | --- | --- |
 | `/long` | `/long [symbol] [leverage] [size $]` | Open a long. Example: `/long btc 5 100` |
 | `/short` | `/short [symbol] [leverage] [size $]` | Open a short. Example: `/short eth 10 250` |
-| `/close` | `/close [symbol] [percent]` | Close a position — defaults to 100%. Example: `/close btc 50` closes half. |
+| `/close` | `/close [symbol] [percent]` | Close a position -- defaults to 100%. Example: `/close btc 50` closes half. |
 
 ## Orders
 
@@ -60,7 +60,7 @@ The order for opening a position is `TICKER LEVERAGE MARGIN`.
 | `price` | `price <symbol>` | Quick price for a ticker. Example: `price mu` (no slash needed). |
 | `/chart` | `/chart <symbol> [interval] [indicators]` | A price chart. Also `/c` or just `lg`. |
 
-**Chart options:** add indicators like `bb`, `sma50`, `ema20`, or `vwap` — combine up to four:
+**Chart options:** add indicators like `bb`, `sma50`, `ema20`, or `vwap` -- combine up to four:
 
 ```
 lg btc 1h bb ema50
@@ -76,7 +76,7 @@ lg btc/eth 1d
 
 | Command | Syntax | Description |
 | --- | --- | --- |
-| `/alert` | `/alert <symbol> <price>` | One-shot price alert — the bot messages you when the price is hit. Example: `/alert btc 70000` |
+| `/alert` | `/alert <symbol> <price>` | One-shot price alert -- the bot messages you when the price is hit. Example: `/alert btc 70000` |
 
 ## Social & leaderboards
 
@@ -88,12 +88,12 @@ lg btc/eth 1d
 
 ## Moving funds
 
-For your security, moving money is handled on the website — these commands link you there.
+For your security, moving money is handled on the website -- these commands link you there.
 
 | Command | Description |
 | --- | --- |
-| `/withdraw` · `/send` | Withdraw or send funds — opens the app. |
-| `/export` | Export your wallet's private key — opens the app. |
+| `/withdraw` · `/send` | Withdraw or send funds -- opens the app. |
+| `/export` | Export your wallet's private key -- opens the app. |
 
 <Warning>
   The bot can trade on your behalf but **cannot move your funds**. Withdrawals and key export always happen on [app.legend.trade](https://app.legend.trade), never in chat.
