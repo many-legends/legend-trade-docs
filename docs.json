@@ -30,6 +30,28 @@
     "default": "dark",
     "strict": true
   },
+  "redirects": [
+    {
+      "source": "/arena",
+      "destination": "/trading"
+    },
+    {
+      "source": "/arena/mechanics",
+      "destination": "/trading"
+    },
+    {
+      "source": "/arena/wagers",
+      "destination": "/about/fees"
+    },
+    {
+      "source": "/arena/queues",
+      "destination": "/trading"
+    },
+    {
+      "source": "/arena/elo",
+      "destination": "/trading/elo"
+    }
+  ],
   "navigation": {
     "tabs": [
       {
@@ -82,16 +104,6 @@
               "copy-trading/index",
               "copy-trading/autocopy",
               "copy-trading/limits"
-            ]
-          },
-          {
-            "group": "Arena",
-            "pages": [
-              "arena/index",
-              "arena/mechanics",
-              "arena/wagers",
-              "arena/queues",
-              "arena/elo"
             ]
           },
           {

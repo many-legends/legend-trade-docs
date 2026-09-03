@@ -4,7 +4,7 @@ description: "How the composite trader rating works"
 mode: "wide"
 ---
 
-Trading ELO is a composite rating from **0 to 2,400** that measures your overall quality as a trader. Unlike Arena ELO (which tracks duel wins), Trading ELO evaluates your real trading performance -- risk management, returns, and capital deployed.
+Trading ELO is a composite rating from **0 to 2,400** that measures your overall quality as a trader using real trading performance -- risk management, returns, and capital deployed.
 
 ## The formula
 
@@ -83,13 +83,3 @@ Trading ELO is recalculated every 5 minutes by a background job. It pulls your l
 - **Peak account value** (high water mark) from periodic snapshots
 
 Your ELO is scoped to the current season period and displayed on your profile and the leaderboard.
-
-## Key differences from Arena ELO
-
-| | Trading ELO | Arena ELO |
-|---|---|---|
-| **Range** | 0 -- 2,400 | 1,200+ (unbounded) |
-| **Based on** | Real trading performance | 1v1 duel wins/losses |
-| **Inputs** | Sortino, ROI, peak capital | Win/loss vs. opponent rating |
-| **Starting value** | 200 (baseline) | 1,200 |
-| **Update frequency** | Every 5 minutes | After each duel settles |
