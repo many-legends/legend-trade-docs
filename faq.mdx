@@ -8,7 +8,7 @@ mode: "wide"
 
 <AccordionGroup>
   <Accordion title="What is the difference between Legend and Hyperliquid?">
-    Legend is a competitive social trading platform built on top of Hyperliquid. Hyperliquid is the underlying exchange -- it provides the liquidity, order matching, and on-chain settlement. Legend adds the social and competitive layers: head-to-head Arena matches, ELO rankings, clans, copy-trading, live spectating, and a social feed.
+    Legend is a competitive social trading platform built on top of Hyperliquid. Hyperliquid is the underlying exchange -- it provides the liquidity, order matching, and on-chain settlement. Legend adds trader profiles, ELO rankings, clans, copy trading, chat, and a social feed.
 
     TLDR: Hyperliquid is the engine. Legend is the experience built on top of it.
   </Accordion>
@@ -27,46 +27,6 @@ mode: "wide"
 
   <Accordion title="Can I link accounts together or create sub-accounts?">
     This is not currently supported.
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Arena
-
-<AccordionGroup>
-  <Accordion title="What is the Arena?">
-    The Arena is Legend's competitive trading mode -- ranked PvP matches where two traders compete head-to-head over a fixed timeframe. Both players trade with a $10,000 paper trading balance. The trader with the higher ROI% at the end wins the wager. Every match affects your ELO rating and rank.
-  </Accordion>
-
-  <Accordion title="How do Arena matches work?">
-    1. **Queue up** -- choose a wager from $10 to $1,000. Public matchmaking runs for 15 minutes; direct challenges support 15 minutes, 30 minutes, 1 hour, 24 hours, or 1 week.
-    2. **Get matched** -- you're paired with an opponent at a similar skill level, or challenge someone directly
-    3. **Trade** -- both players trade perps using a fixed $10,000 paper trading balance
-    4. **Settlement** -- when time runs out, the trader with the higher PnL wins and takes the full pot
-  </Accordion>
-
-  <Accordion title="How are wagers handled?">
-    Both players commit the same wager amount using the $10, $50, $100, $500, or $1,000 presets. Wagers are locked at match start and settled automatically at the end. There is no partial payout -- the winner takes the full pot.
-  </Accordion>
-
-  <Accordion title="What is the Arena Balance?">
-    Each Arena match gives both players a fixed $10,000 paper trading balance to trade with. This is separate from your real account balance. The wager is the real money at stake -- the paper balance is just your trading capital for the match.
-  </Accordion>
-
-  <Accordion title="What match types are available?">
-    - **Public Match** -- standard ranked matchmaking based on your ELO rating. Available 24/7.
-    - **Direct Challenge** -- challenge a specific player by sending them a duel link. Both players agree on wager and duration. Can be ranked or unranked.
-    - **Competitions** -- custom tournaments with configurable budgets ($10k-$100k) and unlimited participants.
-    - **Clan Battles** -- team-based matches between clans (in development).
-  </Accordion>
-
-  <Accordion title="Can I spectate matches?">
-    Yes. All Arena matches can be spectated in real-time, including by users who aren't logged in. Spectators see both players' PnL, positions, and trades as they happen. Copy-trading is available from the spectator view.
-  </Accordion>
-
-  <Accordion title="What happens if I lose connection during a match?">
-    Your positions remain open and your PnL continues to update. Arena matches are settled based on final PnL at match end regardless of connection status -- there is no pause or restart.
   </Accordion>
 </AccordionGroup>
 
@@ -145,7 +105,7 @@ mode: "wide"
 
 <AccordionGroup>
   <Accordion title="What are Clans?">
-    Clans are Legend's team system. Compete together, climb together. Each clan has its own ELO, chat, member list, and shared stats. You can only be in one clan at a time, and clans are capped at 300 members. Rolling 30-day clan volume unlocks matching 0–5% member rebates and leader shares.
+    Clans are Legend's team system. Trade together, grow together. Each clan has its own ELO, chat, member list, and shared stats. You can only be in one clan at a time, and clans are capped at 300 members. Rolling 30-day clan volume unlocks matching 0–5% member rebates and leader shares.
   </Accordion>
 
   <Accordion title="How do I create a Clan?">
@@ -153,18 +113,17 @@ mode: "wide"
   </Accordion>
 
   <Accordion title="What is copy-trading?">
-    Copy-trading lets you mirror another trader's positions. You set the dollar amount or percentage of your balance to allocate, and the system matches the target trader's leverage and direction. You can add your own take-profit and stop-loss levels. Copy-trading is available from trader profiles and match spectator views.
+    Copy trading lets you mirror another trader's positions. You choose how much to allocate, and the system proportionally reflects the target trader's position changes in a dedicated copy wallet. Copy trading is available from trader profiles.
   </Accordion>
 
   <Accordion title="What chat features are available?">
-    - **Arena chat** -- live chat with your opponent during a match
     - **Clan chat** -- persistent group chat for your clan
     - **Direct messages** -- message any trader on the platform
     - **Group chats** -- private group conversations
   </Accordion>
 
   <Accordion title="What appears on the feed?">
-    The feed shows real-time activity from traders you follow and your clanmates: trade entries/exits with PnL, Arena match results, and copy-trading events. You can also view the feed scoped to a specific token chart to see what your network traded at key price levels.
+    The feed shows real-time activity from traders you follow and your clanmates, including trade entries and exits with PnL and copy-trading events. You can also view the feed scoped to a specific token chart to see what your network traded at key price levels.
   </Accordion>
 </AccordionGroup>
 
@@ -181,9 +140,6 @@ mode: "wide"
     A platform fee (builder code fee) is charged on top of Hyperliquid network fees: **0.05%** for perpetuals and **0.25%** for spot. A portion of this fee funds referral payouts, clan member rebates, and clan leader shares.
   </Accordion>
 
-  <Accordion title="Are there fees for Arena matches?">
-    Arena wagers are settled directly between players. The only costs are the wager amount itself and standard trading fees incurred during the match.
-  </Accordion>
 </AccordionGroup>
 
 ---
