@@ -4,9 +4,9 @@ description: "Trading fees on Legend"
 mode: "wide"
 ---
 
-Legend trades are executed on [Hyperliquid](https://hyperliquid.xyz). Your total fee on each trade has two parts: the **Hyperliquid network fee** and the **Legend platform fee**.
+Legend trades are executed on [Hyperliquid](https://hyperliquid.xyz). Your total fee on each trade has two parts: the **Hyperliquid trading fee** and the **Legend platform fee**.
 
-## Hyperliquid Network Fees
+## Hyperliquid Trading Fees
 
 Hyperliquid charges maker/taker fees based on your rolling 14-day weighted volume and HYPE staking tier. Perpetual and spot volume share one volume tier, with spot volume weighted double. Sub-account volume counts toward the master account, and all sub-accounts share the same tier.
 
@@ -14,14 +14,17 @@ Hyperliquid controls this external fee schedule and may change it independently 
 
 ## Legend Platform Fee
 
-A platform fee (builder code fee) is charged on every trade placed through Legend, on top of the Hyperliquid network fee:
+A platform fee (builder code fee) is charged on every trade placed through Legend, on top of the Hyperliquid trading fee:
 
 | Market | Platform Fee |
 | --- | --- |
 | Perpetuals | 0.05% |
+| Copy-trading perpetuals | 0.10% |
 | Spot | 0.25% |
 
 A portion of this fee funds [referral payouts, clan member rebates, and clan leader shares](/rewards-and-points/referrals-and-rewards).
+
+Copy-wallet orders use a separate 0.10% Legend builder fee because they are executed by the copy-trading service. This is separate from any profit-share rate set by the trader you copy.
 
 Clan fee rewards do not reduce the fee charged when a trade executes. Eligible member rebates and leader shares accrue separately as claimable rewards.
 
@@ -29,7 +32,7 @@ Clan fee rewards do not reduce the fee charged when a trade executes. Eligible m
 
 Your total fee per trade is the sum of both components:
 
-**Total fee** = Hyperliquid network fee + Legend platform fee
+**Total fee** = Hyperliquid trading fee + Legend platform fee
 
 Your actual Hyperliquid component depends on your current volume and staking tier. The order interface displays the applicable fee before submission.
 

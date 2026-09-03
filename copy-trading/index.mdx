@@ -13,7 +13,7 @@ This is the fastest way to follow a trader's strategy with real capital, without
 </Card>
 
 <Note>
-  Copy trading is currently in **alpha**. Allocations range from \$50 to \$100,000 per trader.
+  Copy-trading allocations range from \$50 to \$100,000 per trader.
 </Note>
 
 ## How It Works
@@ -25,7 +25,7 @@ This is the fastest way to follow a trader's strategy with real capital, without
 
 ## Copy Wallet
 
-Each copy profile uses a **separate sub-wallet** on Hyperliquid. Your main trading wallet is never touched by copy trading.
+Each copy profile uses a **separate sub-wallet** on Hyperliquid. Copied positions remain isolated from positions in your main trading wallet; your main wallet is used only when you add funds to or withdraw funds from the copy wallet.
 
 - Funds are isolated per trader -- copying Trader A and Trader B uses two separate wallets
 - Your copy wallet balance = your allocation + any trading gains or losses
@@ -52,6 +52,10 @@ Some traders charge a **profit share** -- a cut of the gains they generate for y
 - The rate is **locked in when you start copying**. If the trader changes their rate later, your existing copy keeps the rate you agreed to.
 - The maximum any trader can charge is **20%**.
 - Many traders charge nothing -- the copy screen always shows the exact rate, or none.
+
+## Trading Fees
+
+Orders placed by the copy-trading service carry a **0.10% Legend builder fee**, in addition to Hyperliquid's applicable trading fee. This fee is separate from profit share: the builder fee applies when copied orders execute, while profit share applies only to gains from winning copied positions when the trader has enabled it.
 
 ## Pre-Existing Positions
 
@@ -84,7 +88,7 @@ You stay in control of your money the whole time:
 
 - **Very small trades** -- Orders below the copy engine's minimum executable notional are skipped.
 
-Copy trading does not exclude an asset solely because its open interest is below a fixed threshold. Instead, the fleet-wide copied exposure to an asset is capped at 1% of that asset's open interest. New copied exposure is scaled down when needed to stay within the cap and skipped only when no capacity remains.
+Copy trading does not exclude an asset solely because its open interest is below a fixed threshold. Instead, the fleet-wide copied exposure to an asset is capped at 5% of that asset's open interest. New copied exposure is scaled down when needed to stay within the cap and skipped only when no capacity remains.
 
 ## Copying a Single Trade
 

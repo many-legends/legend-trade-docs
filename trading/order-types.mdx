@@ -60,6 +60,8 @@ Time-Weighted Average Price. Splits a large order into smaller sub-orders execut
 **Parameters:**
 - **Duration** -- the total execution window
 - **Randomize** -- optionally randomize timing within the execution window
+- **Trigger price** -- optionally wait until the market reaches a specified price before execution begins
+- **Maximum / minimum price** -- optionally stop a buy TWAP above a maximum price or a sell TWAP below a minimum price
 
 <Note>
   TWAP orders have a **\$100 minimum total notional** and can run from **5 minutes to 7 days**.

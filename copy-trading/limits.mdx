@@ -3,7 +3,7 @@ title: "Limits & Safeguards"
 description: "Copy trading deposit limits, asset restrictions, and safety mechanisms"
 ---
 
-Copy trading includes several safeguards to protect copiers during the alpha period.
+Copy trading includes several safeguards to protect copiers.
 
 ## Deposit Limits
 
@@ -38,9 +38,13 @@ Traders can charge a profit share of up to **20%** on the gains they generate fo
 
 It applies only to winning trades and is charged when a winning copied position closes. Positions that close at a loss incur no profit share.
 
+## Trading Fees
+
+Orders executed from a copy wallet carry a **0.10% Legend builder fee**, in addition to Hyperliquid's applicable trading fee. The builder fee is charged on copied order execution and is separate from any profit share charged on winning copied positions.
+
 ## Asset Restrictions
 
-To limit fleet-wide concentration, total copy trading exposure to any one asset is capped at 1% of its open interest. An asset is not excluded solely because it is below a fixed open-interest threshold. If copiers would collectively exceed the cap, new copied exposure is scaled down to fit or skipped when no capacity remains.
+To limit fleet-wide concentration, total copy trading exposure to any one asset is capped at 5% of its open interest. An asset is not excluded solely because it is below a fixed open-interest threshold. If copiers would collectively exceed the cap, new copied exposure is scaled down to fit or skipped when no capacity remains.
 
 These restrictions are evaluated in real-time for each order.
 
