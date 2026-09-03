@@ -86,13 +86,15 @@
             "pages": [
               "trading/index",
               "trading/order-types",
-              "trading/elo"
+              "trading/elo",
+              "ranks"
             ]
           },
           {
             "group": "Social",
             "pages": [
               "social",
+              "activity",
               "feed",
               "clans",
               "chat"
@@ -164,7 +166,7 @@
         "items": [
           { "label": "Trade", "href": "https://app.legend.trade" },
           { "label": "Mobile App", "href": "https://legend.trade/mobile" },
-          { "label": "Esports", "href": "https://legend.trade/esports" }
+          { "label": "Ranks", "href": "https://app.legend.trade/ranks" }
         ]
       },
       {
