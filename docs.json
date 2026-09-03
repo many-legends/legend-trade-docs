@@ -163,8 +163,7 @@
         "title": "Product",
         "items": [
           { "label": "Trade", "href": "https://app.legend.trade" },
-          { "label": "Mobile App", "href": "https://legend.trade/mobile" },
-          { "label": "Esports", "href": "https://legend.trade/esports" }
+          { "label": "Mobile App", "href": "https://legend.trade/mobile" }
         ]
       },
       {
